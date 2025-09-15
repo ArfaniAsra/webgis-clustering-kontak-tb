@@ -1,0 +1,50 @@
+{
+    "0":{
+        "('ibu_hamil_pct', 'count')":1.0,
+        "('ibu_hamil_pct', 'mean')":0.2984540082,
+        "('lansia_pct', 'count')":1.0,
+        "('lansia_pct', 'mean')":9.1685071331,
+        "('diabetes_mellitus_pct', 'count')":1.0,
+        "('diabetes_mellitus_pct', 'mean')":2.6204261923,
+        "('perokok_pct', 'count')":1.0,
+        "('perokok_pct', 'mean')":12.4753775443,
+        "('berobat_tidak_tuntas_pct', 'count')":1.0,
+        "('berobat_tidak_tuntas_pct', 'mean')":0.0537217215
+    },
+    "1":{
+        "('ibu_hamil_pct', 'count')":6.0,
+        "('ibu_hamil_pct', 'mean')":0.2332740872,
+        "('lansia_pct', 'count')":6.0,
+        "('lansia_pct', 'mean')":7.4845529251,
+        "('diabetes_mellitus_pct', 'count')":6.0,
+        "('diabetes_mellitus_pct', 'mean')":0.5200385703,
+        "('perokok_pct', 'count')":6.0,
+        "('perokok_pct', 'mean')":14.8895293064,
+        "('berobat_tidak_tuntas_pct', 'count')":6.0,
+        "('berobat_tidak_tuntas_pct', 'mean')":0.1246691895
+    },
+    "2":{
+        "('ibu_hamil_pct', 'count')":2.0,
+        "('ibu_hamil_pct', 'mean')":0.0,
+        "('lansia_pct', 'count')":2.0,
+        "('lansia_pct', 'mean')":8.0545774648,
+        "('diabetes_mellitus_pct', 'count')":2.0,
+        "('diabetes_mellitus_pct', 'mean')":0.234741784,
+        "('perokok_pct', 'count')":2.0,
+        "('perokok_pct', 'mean')":27.2080399061,
+        "('berobat_tidak_tuntas_pct', 'count')":2.0,
+        "('berobat_tidak_tuntas_pct', 'mean')":0.0
+    },
+    "3":{
+        "('ibu_hamil_pct', 'count')":16.0,
+        "('ibu_hamil_pct', 'mean')":0.0694610752,
+        "('lansia_pct', 'count')":16.0,
+        "('lansia_pct', 'mean')":9.1116264063,
+        "('diabetes_mellitus_pct', 'count')":16.0,
+        "('diabetes_mellitus_pct', 'mean')":0.1375138708,
+        "('perokok_pct', 'count')":16.0,
+        "('perokok_pct', 'mean')":6.5065608708,
+        "('berobat_tidak_tuntas_pct', 'count')":16.0,
+        "('berobat_tidak_tuntas_pct', 'mean')":0.0192513001
+    }
+}

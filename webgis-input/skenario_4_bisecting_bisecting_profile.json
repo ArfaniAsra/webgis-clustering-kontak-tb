@@ -1,0 +1,66 @@
+{
+    "0":{
+        "('rata_rata_umur', 'count')":3.0,
+        "('rata_rata_umur', 'mean')":33.4599058922,
+        "('laki-laki_pct', 'count')":3.0,
+        "('laki-laki_pct', 'mean')":45.687072532,
+        "('perempuan_pct', 'count')":3.0,
+        "('perempuan_pct', 'mean')":54.312927468
+    },
+    "1":{
+        "('rata_rata_umur', 'count')":1.0,
+        "('rata_rata_umur', 'mean')":39.5,
+        "('laki-laki_pct', 'count')":1.0,
+        "('laki-laki_pct', 'mean')":43.75,
+        "('perempuan_pct', 'count')":1.0,
+        "('perempuan_pct', 'mean')":56.25
+    },
+    "2":{
+        "('rata_rata_umur', 'count')":3.0,
+        "('rata_rata_umur', 'mean')":37.4662611319,
+        "('laki-laki_pct', 'count')":3.0,
+        "('laki-laki_pct', 'mean')":46.9491172625,
+        "('perempuan_pct', 'count')":3.0,
+        "('perempuan_pct', 'mean')":53.0508827375
+    },
+    "3":{
+        "('rata_rata_umur', 'count')":1.0,
+        "('rata_rata_umur', 'mean')":31.8625954198,
+        "('laki-laki_pct', 'count')":1.0,
+        "('laki-laki_pct', 'mean')":52.6717557252,
+        "('perempuan_pct', 'count')":1.0,
+        "('perempuan_pct', 'mean')":47.3282442748
+    },
+    "4":{
+        "('rata_rata_umur', 'count')":4.0,
+        "('rata_rata_umur', 'mean')":32.0155491752,
+        "('laki-laki_pct', 'count')":4.0,
+        "('laki-laki_pct', 'mean')":49.5221706187,
+        "('perempuan_pct', 'count')":4.0,
+        "('perempuan_pct', 'mean')":50.4778293813
+    },
+    "5":{
+        "('rata_rata_umur', 'count')":1.0,
+        "('rata_rata_umur', 'mean')":28.0,
+        "('laki-laki_pct', 'count')":1.0,
+        "('laki-laki_pct', 'mean')":49.0538573508,
+        "('perempuan_pct', 'count')":1.0,
+        "('perempuan_pct', 'mean')":50.9461426492
+    },
+    "6":{
+        "('rata_rata_umur', 'count')":7.0,
+        "('rata_rata_umur', 'mean')":32.9612138307,
+        "('laki-laki_pct', 'count')":7.0,
+        "('laki-laki_pct', 'mean')":47.7126780568,
+        "('perempuan_pct', 'count')":7.0,
+        "('perempuan_pct', 'mean')":52.2873219432
+    },
+    "7":{
+        "('rata_rata_umur', 'count')":5.0,
+        "('rata_rata_umur', 'mean')":33.9536052662,
+        "('laki-laki_pct', 'count')":5.0,
+        "('laki-laki_pct', 'mean')":48.8526537467,
+        "('perempuan_pct', 'count')":5.0,
+        "('perempuan_pct', 'mean')":51.1473462533
+    }
+}

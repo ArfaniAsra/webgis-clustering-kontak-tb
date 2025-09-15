@@ -1,0 +1,50 @@
+{
+    "0":{
+        "('latitude', 'count')":5.0,
+        "('latitude', 'mean')":-5.14965208,
+        "('longitude', 'count')":5.0,
+        "('longitude', 'mean')":119.4712469,
+        "('jumlah_fasyankes_unik', 'count')":5.0,
+        "('jumlah_fasyankes_unik', 'mean')":6.0
+    },
+    "1":{
+        "('latitude', 'count')":2.0,
+        "('latitude', 'mean')":-5.17299675,
+        "('longitude', 'count')":2.0,
+        "('longitude', 'mean')":119.43654605,
+        "('jumlah_fasyankes_unik', 'count')":2.0,
+        "('jumlah_fasyankes_unik', 'mean')":9.5
+    },
+    "2":{
+        "('latitude', 'count')":8.0,
+        "('latitude', 'mean')":-5.140253625,
+        "('longitude', 'count')":8.0,
+        "('longitude', 'mean')":119.4156231875,
+        "('jumlah_fasyankes_unik', 'count')":8.0,
+        "('jumlah_fasyankes_unik', 'mean')":2.875
+    },
+    "3":{
+        "('latitude', 'count')":2.0,
+        "('latitude', 'mean')":-5.3942374,
+        "('longitude', 'count')":2.0,
+        "('longitude', 'mean')":119.77141235,
+        "('jumlah_fasyankes_unik', 'count')":2.0,
+        "('jumlah_fasyankes_unik', 'mean')":1.0
+    },
+    "4":{
+        "('latitude', 'count')":2.0,
+        "('latitude', 'mean')":-5.2649949,
+        "('longitude', 'count')":2.0,
+        "('longitude', 'mean')":119.63178015,
+        "('jumlah_fasyankes_unik', 'count')":2.0,
+        "('jumlah_fasyankes_unik', 'mean')":1.0
+    },
+    "5":{
+        "('latitude', 'count')":6.0,
+        "('latitude', 'mean')":-5.3038259167,
+        "('longitude', 'count')":6.0,
+        "('longitude', 'mean')":119.4430980333,
+        "('jumlah_fasyankes_unik', 'count')":6.0,
+        "('jumlah_fasyankes_unik', 'mean')":1.3333333333
+    }
+}
