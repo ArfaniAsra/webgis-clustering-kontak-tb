@@ -1,0 +1,2167 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebGIS Clustering Kontak Tuberkulosis - Makassar & Gowa</title>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f6fa;
+      overflow: hidden;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+
+    .loading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .loading-spinner {
+      width: 40px;
+      height: 40px;
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #3498db;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-bottom: 20px;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .sidebar {
+      width: 320px;
+      background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+      color: white;
+      overflow-y: auto;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .sidebar.collapsed {
+      width: 60px;
+    }
+
+    .sidebar-content {
+      display: block;
+    }
+
+    .sidebar.collapsed .sidebar-content {
+      display: none;
+    }
+
+    .sidebar-header {
+      padding: 20px;
+      border-bottom: 1px solid #34495e;
+      position: relative;
+    }
+
+    .sidebar-header h1 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: #ecf0f1;
+    }
+
+    .sidebar-header p {
+      font-size: 12px;
+      color: #bdc3c7;
+      opacity: 0.8;
+    }
+
+    .sidebar-toggle {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(52, 73, 94, 0.8);
+      color: white;
+      border: none;
+      padding: 8px;
+      border-radius: 4px;
+      cursor: pointer;
+      z-index: 1001;
+      transition: all 0.3s ease;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+
+    .sidebar-toggle:hover {
+      background: rgba(52, 73, 94, 1);
+    }
+
+    .sidebar-collapsed-toggle {
+      position: absolute;
+      top: 20px;
+      left: 15px;
+      width: 30px;
+      height: 30px;
+      background: #2c3e50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1001;
+      font-size: 14px;
+    }
+
+    .sidebar.collapsed .sidebar-collapsed-toggle {
+      display: flex;
+    }
+
+    .clustering-selector {
+      padding: 20px;
+      border-bottom: 1px solid #34495e;
+    }
+
+    .clustering-selector h3 {
+      font-size: 14px;
+      margin-bottom: 15px;
+      color: #ecf0f1;
+    }
+
+    .clustering-buttons {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+
+    .clustering-btn {
+      padding: 12px 10px;
+      background: #34495e;
+      border: 1px solid #4a5f7a;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 10px;
+      text-align: left;
+      line-height: 1.3;
+    }
+
+    .clustering-btn:hover {
+      background: #4a5f7a;
+      transform: translateY(-1px);
+    }
+
+    .clustering-btn.active {
+      background: #3498db;
+      border-color: #2980b9;
+      box-shadow: 0 2px 10px rgba(52, 152, 219, 0.3);
+    }
+
+    .clustering-title {
+      font-weight: 600;
+      margin-bottom: 2px;
+      font-size: 11px;
+    }
+
+    .clustering-desc {
+      opacity: 0.7;
+      font-size: 9px;
+    }
+
+    .controls {
+      padding: 15px 20px;
+      border-bottom: 1px solid #34495e;
+    }
+
+    .controls h4 {
+      font-size: 12px;
+      margin-bottom: 10px;
+      color: #ecf0f1;
+    }
+
+    .control-buttons {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .control-btn {
+      padding: 6px 12px;
+      background: #2c3e50;
+      border: 1px solid #34495e;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .control-btn:hover {
+      background: #34495e;
+    }
+
+    .control-btn.active {
+      background: #27ae60;
+      border-color: #229954;
+    }
+
+    .boundaries-status {
+      padding: 10px 20px;
+      background: rgba(52, 152, 219, 0.1);
+      border-bottom: 1px solid #34495e;
+      font-size: 11px;
+      color: #ecf0f1;
+      display: none;
+    }
+
+    .boundaries-status.show {
+      display: block;
+    }
+
+    .boundaries-status.loading {
+      background: rgba(241, 196, 15, 0.1);
+      color: #f1c40f;
+    }
+
+    .boundaries-status.success {
+      background: rgba(39, 174, 96, 0.1);
+      color: #27ae60;
+    }
+
+    .boundaries-status.error {
+      background: rgba(231, 76, 60, 0.1);
+      color: #e74c3c;
+    }
+
+    .kecamatan-list {
+      padding: 20px;
+    }
+
+    .kecamatan-list-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .kecamatan-list-header:hover {
+      color: #3498db;
+    }
+
+    .kecamatan-list h3 {
+      font-size: 14px;
+      color: #ecf0f1;
+      margin: 0;
+    }
+
+    .kecamatan-count {
+      background: #3498db;
+      color: white;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 10px;
+    }
+
+    .toggle-icon {
+      font-size: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .toggle-icon.expanded {
+      transform: rotate(90deg);
+    }
+
+    .kecamatan-items {
+      max-height: 400px;
+      overflow-y: auto;
+      transition: max-height 0.3s ease;
+    }
+
+    .kecamatan-items.collapsed {
+      max-height: 0;
+      overflow: hidden;
+    }
+
+    .kecamatan-item {
+      padding: 12px 15px;
+      margin-bottom: 8px;
+      background: #34495e;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-left: 4px solid transparent;
+      font-size: 12px;
+    }
+
+    .kecamatan-item:hover {
+      background: #4a5f7a;
+      transform: translateX(5px);
+    }
+
+    .kecamatan-item.selected {
+      background: #3498db;
+      border-left-color: #2980b9;
+    }
+
+    .kecamatan-name {
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #ecf0f1;
+    }
+
+    .kecamatan-cluster {
+      font-size: 11px;
+      font-weight: 500;
+      margin-bottom: 4px;
+      padding: 2px 8px;
+      border-radius: 10px;
+      display: inline-block;
+      color: white;
+      margin-right: 5px;
+    }
+
+    .kecamatan-status {
+      font-size: 10px;
+      font-weight: 500;
+      padding: 2px 6px;
+      border-radius: 8px;
+      display: inline-block;
+      color: white;
+    }
+
+    .status-rendah {
+      background-color: #27ae60;
+    }
+
+    .status-sedang {
+      background-color: #f39c12;
+    }
+
+    .status-tinggi {
+      background-color: #e74c3c;
+    }
+
+    .kecamatan-location {
+      font-size: 10px;
+      opacity: 0.7;
+      color: #bdc3c7;
+      margin-bottom: 2px;
+    }
+
+    .kecamatan-stats {
+      font-size: 10px;
+      opacity: 0.7;
+      margin-top: 4px;
+      color: #95a5a6;
+    }
+
+    .main-content {
+      flex: 1;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .top-bar {
+      background: white;
+      padding: 15px 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      z-index: 500;
+      position: relative;
+    }
+
+    .top-bar h2 {
+      font-size: 20px;
+      color: #2c3e50;
+      margin-bottom: 5px;
+    }
+
+    .clustering-info {
+      font-size: 14px;
+      color: #7f8c8d;
+    }
+
+    .map-container {
+      flex: 1;
+      position: relative;
+    }
+
+    #map {
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .legend {
+      position: absolute;
+      bottom: 160px;
+      right: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      z-index: 400;
+      max-width: 300px;
+      transition: all 0.3s ease;
+    }
+
+    .legend-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      border-bottom: 1px solid #ecf0f1;
+      cursor: pointer;
+      background: #f8f9fa;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .legend-header:hover {
+      background: #e9ecef;
+    }
+
+    .legend-header h4 {
+      margin: 0;
+      font-size: 14px;
+      color: #2c3e50;
+    }
+
+    .legend-toggle {
+      font-size: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .legend-toggle.collapsed {
+      transform: rotate(-90deg);
+    }
+
+    .legend-content {
+      padding: 15px;
+      max-height: 300px;
+      overflow-y: auto;
+      transition: max-height 0.3s ease;
+    }
+
+    .legend-content.collapsed {
+      max-height: 0;
+      padding: 0 15px;
+      overflow: hidden;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      font-size: 12px;
+    }
+
+    .legend-color {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      margin-right: 10px;
+      border: 2px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .legend-count {
+      margin-left: auto;
+      font-size: 11px;
+      color: #7f8c8d;
+    }
+
+    .legend-section {
+      margin-top: 15px;
+      padding-top: 15px;
+      border-top: 1px solid #ecf0f1;
+    }
+
+    .legend-section-title {
+      font-weight: bold;
+      font-size: 11px;
+      color: #2c3e50;
+      margin-bottom: 8px;
+    }
+
+    .info-panel {
+      position: absolute;
+      top: 80px;
+      left: 20px;
+      background: white;
+      padding: 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      z-index: 400;
+      max-width: 500px;
+      max-height: 75vh;
+      overflow: hidden;
+      display: none;
+    }
+
+    .info-panel.show {
+      display: block;
+      animation: slideInLeft 0.3s ease;
+    }
+
+    @keyframes slideInLeft {
+      from {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    .info-panel-header {
+      background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+      color: white;
+      padding: 20px;
+      border-radius: 10px 10px 0 0;
+      position: relative;
+    }
+
+    .info-panel h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .info-location {
+      font-size: 14px;
+      opacity: 0.9;
+      margin-top: 5px;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      color: white;
+      opacity: 0.8;
+    }
+
+    .close-btn:hover {
+      opacity: 1;
+    }
+
+    .info-content {
+      padding: 20px;
+      max-height: calc(75vh - 100px);
+      overflow-y: auto;
+      font-size: 13px;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .info-summary {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .summary-card {
+      background: #f8f9fa;
+      padding: 12px;
+      border-radius: 6px;
+      border-left: 3px solid #3498db;
+      text-align: center;
+    }
+
+    .summary-title {
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 5px;
+      font-size: 11px;
+    }
+
+    .summary-value {
+      font-size: 16px;
+      font-weight: bold;
+      color: #3498db;
+    }
+
+    .summary-subtitle {
+      font-size: 9px;
+      color: #7f8c8d;
+      margin-top: 2px;
+    }
+
+    .status-card {
+      border-left-color: #27ae60;
+    }
+
+    .status-card .summary-value {
+      color: #27ae60;
+    }
+
+    .status-card.sedang {
+      border-left-color: #f39c12;
+    }
+
+    .status-card.sedang .summary-value {
+      color: #f39c12;
+    }
+
+    .status-card.tinggi {
+      border-left-color: #e74c3c;
+    }
+
+    .status-card.tinggi .summary-value {
+      color: #e74c3c;
+    }
+
+    .interpretation-section {
+      margin-bottom: 25px;
+    }
+
+    .interpretation-title {
+      font-weight: bold;
+      color: #2c3e50;
+      margin-bottom: 15px;
+      font-size: 16px;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 8px;
+    }
+
+    .interpretation-text {
+      background: #f8f9fa;
+      padding: 15px;
+      border-radius: 6px;
+      border-left: 4px solid #3498db;
+      margin-bottom: 15px;
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    .recommendation-section {
+      background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .recommendation-title {
+      font-weight: bold;
+      margin-bottom: 15px;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .recommendation-text {
+      font-size: 13px;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    .stats-bar {
+      background: white;
+      padding: 15px 20px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      border-top: 1px solid #ecf0f1;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 10px;
+      background: #f8f9fa;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .stat-item:hover {
+      background: #e3f2fd;
+      transform: translateY(-2px);
+    }
+
+    .stat-number {
+      font-size: 24px;
+      font-weight: bold;
+      color: #3498db;
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: #7f8c8d;
+      margin-top: 5px;
+      font-weight: 500;
+    }
+
+    .stat-sublabel {
+      font-size: 10px;
+      color: #95a5a6;
+      margin-top: 2px;
+    }
+
+    .error-message {
+      background: #e74c3c;
+      color: white;
+      padding: 15px;
+      border-radius: 5px;
+      margin: 20px;
+      text-align: center;
+    }
+
+    .leaflet-popup-content-wrapper {
+      border-radius: 10px;
+    }
+
+    .leaflet-popup-content {
+      margin: 15px;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .custom-tooltip {
+      background: rgba(44, 62, 80, 0.9);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      font-size: 12px;
+      padding: 8px;
+    }
+
+    .kecamatan-area {
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .kecamatan-area:hover {
+      fill-opacity: 0.9 !important;
+      stroke-width: 3 !important;
+    }
+
+    .popup-title {
+      font-weight: bold;
+      color: #2c3e50;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    .popup-cluster {
+      background: #3498db;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: 11px;
+      display: inline-block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      margin-right: 5px;
+    }
+
+    .popup-status {
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: 11px;
+      display: inline-block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: white;
+    }
+
+    .popup-info {
+      color: #555;
+      font-size: 12px;
+    }
+
+    .popup-demo {
+      margin-top: 8px;
+      padding: 8px;
+      background: #f8f9fa;
+      border-radius: 4px;
+      font-size: 11px;
+    }
+
+    /* Scrollbar styling */
+    .sidebar::-webkit-scrollbar,
+    .info-content::-webkit-scrollbar,
+    .info-panel::-webkit-scrollbar,
+    .legend-content::-webkit-scrollbar,
+    .kecamatan-items::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .sidebar::-webkit-scrollbar-track,
+    .info-content::-webkit-scrollbar-track,
+    .info-panel::-webkit-scrollbar-track,
+    .legend-content::-webkit-scrollbar-track,
+    .kecamatan-items::-webkit-scrollbar-track {
+      background: #ecf0f1;
+    }
+
+    .sidebar::-webkit-scrollbar-thumb,
+    .info-content::-webkit-scrollbar-thumb,
+    .info-panel::-webkit-scrollbar-thumb,
+    .legend-content::-webkit-scrollbar-thumb,
+    .kecamatan-items::-webkit-scrollbar-thumb {
+      background: #bdc3c7;
+      border-radius: 3px;
+    }
+
+    .sidebar::-webkit-scrollbar-thumb:hover,
+    .info-content::-webkit-scrollbar-thumb:hover,
+    .info-panel::-webkit-scrollbar-thumb:hover,
+    .legend-content::-webkit-scrollbar-thumb:hover,
+    .kecamatan-items::-webkit-scrollbar-thumb:hover {
+      background: #95a5a6;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 280px;
+      }
+
+      .legend {
+        bottom: 140px;
+        right: 10px;
+        max-width: 250px;
+      }
+
+      .info-panel {
+        left: 10px;
+        right: 10px;
+        max-width: none;
+      }
+
+      .stats-bar {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .info-summary {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="loading" id="loading">
+    <div class="loading-spinner"></div>
+    <p>Memuat data clustering...</p>
+  </div>
+
+  <div class="container">
+    <div class="sidebar" id="sidebar">
+      <button class="sidebar-collapsed-toggle" onclick="toggleSidebar()">☰</button>
+
+      <div class="sidebar-content">
+        <div class="sidebar-header">
+          <button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+          <h1>WebGIS Clustering TB</h1>
+          <p>Kontak Tuberkulosis Makassar & Gowa</p>
+        </div>
+
+        <div class="clustering-selector" id="clustering-selector">
+          <h3>Pilih Metode Clustering</h3>
+          <div class="clustering-buttons">
+            <button class="clustering-btn active" data-clustering="1">
+              <div class="clustering-title">Paparan Kontak TB & Umur</div>
+              <div class="clustering-desc">Clustering berdasarkan profil demografi dan paparan kontak TB</div>
+            </button>
+            <button class="clustering-btn" data-clustering="2">
+              <div class="clustering-title">Gejala Klinis</div>
+              <div class="clustering-desc">Clustering berdasarkan manifestasi gejala klinis</div>
+            </button>
+            <button class="clustering-btn" data-clustering="3">
+              <div class="clustering-title">Faktor Risiko Individu</div>
+              <div class="clustering-desc">Clustering berdasarkan faktor risiko personal</div>
+            </button>
+            <button class="clustering-btn" data-clustering="4">
+              <div class="clustering-title">Demografi Kontak TB</div>
+              <div class="clustering-desc">Clustering berdasarkan karakteristik demografis</div>
+            </button>
+            <button class="clustering-btn" data-clustering="5">
+              <div class="clustering-title">Alur Pasien & Beban Layanan</div>
+              <div class="clustering-desc">Clustering berdasarkan sistem rujukan dan kapasitas</div>
+            </button>
+            <button class="clustering-btn" data-clustering="6">
+              <div class="clustering-title">Geospasial & Akses Layanan</div>
+              <div class="clustering-desc">Clustering berdasarkan lokasi dan aksesibilitas</div>
+            </button>
+          </div>
+        </div>
+
+        <div class="controls">
+          <h4>Kontrol Tampilan</h4>
+          <div class="control-buttons">
+            <button class="control-btn" onclick="showAllClusters()">Reset View</button>
+            <button class="control-btn" onclick="toggleInterpretasi()">Interpretasi</button>
+            <button class="control-btn" onclick="toggleColorMode()" id="color-mode-btn">Mode: Status</button>
+            <button class="control-btn" onclick="reloadBoundaries()">Reload Batas</button>
+          </div>
+        </div>
+
+        <div class="boundaries-status" id="boundaries-status">
+          <span id="boundaries-text">Loading boundaries...</span>
+        </div>
+
+        <div class="kecamatan-list">
+          <div class="kecamatan-list-header" onclick="toggleKecamatanList()">
+            <h3>Daftar Kecamatan <span id="kecamatan-count" class="kecamatan-count">0</span></h3>
+            <span class="toggle-icon expanded" id="toggle-icon">▶</span>
+          </div>
+          <div id="kecamatan-items" class="kecamatan-items"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <div class="top-bar">
+        <h2 id="clustering-title">Memuat Data...</h2>
+        <div id="clustering-desc" class="clustering-info">Sedang memproses data clustering...</div>
+      </div>
+
+      <div class="map-container">
+        <div id="map"></div>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span id="total-kecamatan" class="stat-number">-</span>
+          <div class="stat-label">Total Kecamatan</div>
+          <div class="stat-sublabel">Makassar & Gowa</div>
+        </div>
+        <div class="stat-item">
+          <span id="total-clusters" class="stat-number">-</span>
+          <div class="stat-label">Jumlah Cluster</div>
+          <div class="stat-sublabel">Hasil Analisis</div>
+        </div>
+        <div class="stat-item">
+          <span id="status-tinggi" class="stat-number">-</span>
+          <div class="stat-label">Status Tinggi</div>
+          <div class="stat-sublabel">Perlu Prioritas</div>
+        </div>
+        <div class="stat-item">
+          <span id="avg-contacts" class="stat-number">-</span>
+          <div class="stat-label">Rata-rata Kontak</div>
+          <div class="stat-sublabel">Per Kecamatan</div>
+        </div>
+      </div>
+
+      <div class="legend" id="main-legend">
+        <div class="legend-header" onclick="toggleLegend()">
+          <h4>Legenda Status & Cluster</h4>
+          <span class="legend-toggle" id="legend-toggle">▼</span>
+        </div>
+        <div class="legend-content" id="legend-content">
+          <div id="legend-items"></div>
+        </div>
+      </div>
+
+      <div class="info-panel" id="info-panel">
+        <div class="info-panel-header">
+          <button class="close-btn" onclick="closeInfoPanel()">&times;</button>
+          <h3 id="info-title">Informasi Kecamatan</h3>
+          <div id="info-location" class="info-location"></div>
+        </div>
+        <div class="info-content" id="info-content">
+          <p>Klik pada kecamatan untuk melihat interpretasi detail...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Leaflet JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+
+  <script>
+    // Enhanced Data Loader Class with updated JSON support
+    class ImprovedDataLoader {
+      constructor() {
+        this.masterData = {};
+        this.interpretasiData = {};
+        this.clusterLabels = {};
+        this.clusterStatusMap = {};
+        this.isDataLoaded = false;
+      }
+
+      async loadData() {
+        try {
+          console.log('📄 Loading data from JSON files...');
+
+          // Load all JSON files in parallel
+          const [masterResponse, interpretasiResponse, labelsResponse, statusMapResponse] = await Promise.all([
+            fetch('./webgis-input/master_webgis.json'),
+            fetch('./webgis-input/interpretasi_webgis_v2.json'),
+            fetch('./webgis-input/cluster_labels.json'),
+            fetch('./webgis-input/cluster_status_map.json')
+          ]);
+
+          if (!masterResponse.ok || !interpretasiResponse.ok || !labelsResponse.ok || !statusMapResponse.ok) {
+            throw new Error('Failed to fetch JSON data files');
+          }
+
+          const [masterJson, interpretasiJson, labelsJson, statusMapJson] = await Promise.all([
+            masterResponse.json(),
+            interpretasiResponse.json(),
+            labelsResponse.json(),
+            statusMapResponse.json()
+          ]);
+
+          // Process master data
+          this.masterData = masterJson;
+
+          // Process interpretasi data - convert array to object grouped by kecamatan and scenario
+          this.interpretasiData = {};
+          interpretasiJson.forEach(item => {
+            const key = item.kecamatan_full || `${item.Kecamatan}, ${item.Wilayah}`;
+            if (!this.interpretasiData[key]) {
+              this.interpretasiData[key] = {};
+            }
+            this.interpretasiData[key][item.Skenario] = item;
+          });
+
+          // Process cluster labels and status map
+          this.clusterLabels = labelsJson;
+          this.clusterStatusMap = statusMapJson;
+
+          this.isDataLoaded = true;
+
+          console.log('✅ Data loaded successfully:', {
+            master: Object.keys(this.masterData).length,
+            interpretasi: Object.keys(this.interpretasiData).length,
+            scenarios: Object.keys(this.clusterLabels).length,
+            statusMap: Object.keys(this.clusterStatusMap).length
+          });
+
+          return true;
+        } catch (error) {
+          console.error('❌ Error loading data:', error);
+          return false;
+        }
+      }
+
+      getKecamatanData(kecamatanKey) {
+        return this.masterData[kecamatanKey] || null;
+      }
+
+      getInterpretasiData(kecamatanKey, scenario) {
+        const scenarioKey = `S${scenario}`;
+        return this.interpretasiData[kecamatanKey]?.[scenarioKey] || null;
+      }
+
+      getClusterLabel(scenario, clusterId) {
+        const scenarioKey = `S${scenario}`;
+        return this.clusterLabels[scenarioKey]?.[clusterId.toString()] || `Cluster ${clusterId}`;
+      }
+
+      getClusterStatus(scenario, clusterId) {
+        const scenarioKey = `S${scenario}`;
+        return this.clusterStatusMap[scenarioKey]?.[clusterId.toString()] || 'Tidak Diketahui';
+      }
+
+      getStatusColor(status) {
+        const statusColors = {
+          'Rendah': '#27ae60',
+          'Sedang': '#f39c12',
+          'Tinggi': '#e74c3c'
+        };
+        return statusColors[status] || '#95a5a6';
+      }
+
+      getClusterColor(scenario, clusterId) {
+        const clusterColors = {
+          1: ['#2ecc71', '#f39c12', '#e74c3c', '#8b0000'],
+          2: ['#2ecc71', '#90ee90', '#f39c12', '#e74c3c', '#8b0000'],
+          3: ['#2ecc71', '#f39c12', '#e74c3c', '#8b0000'],
+          4: ['#2ecc71', '#90ee90', '#ffd700', '#f39c12', '#ffa500', '#e74c3c', '#b22222', '#8b0000'],
+          5: ['#2ecc71', '#f39c12', '#e74c3c', '#8b0000'],
+          6: ['#006400', '#2ecc71', '#90ee90', '#f39c12', '#e74c3c', '#8b0000']
+        };
+        return clusterColors[scenario]?.[clusterId] || '#95a5a6';
+      }
+
+      getCurrentColor(scenario, clusterId, colorMode) {
+        if (colorMode === 'cluster') {
+          return this.getClusterColor(scenario, clusterId);
+        } else {
+          const status = this.getClusterStatus(scenario, clusterId);
+          return this.getStatusColor(status);
+        }
+      }
+
+      getClusterStatistics(scenario) {
+        const clusters = {};
+        const clusterKey = `Cluster_S${scenario}`;
+
+        Object.values(this.masterData).forEach(data => {
+          const clusterNum = data[clusterKey];
+          if (clusterNum !== undefined) {
+            clusters[clusterNum] = (clusters[clusterNum] || 0) + 1;
+          }
+        });
+
+        return clusters;
+      }
+
+      getStatusStatistics(scenario) {
+        const statusCounts = { 'Rendah': 0, 'Sedang': 0, 'Tinggi': 0 };
+        const clusterKey = `Cluster_S${scenario}`;
+
+        Object.values(this.masterData).forEach(data => {
+          const clusterNum = data[clusterKey];
+          if (clusterNum !== undefined) {
+            const status = this.getClusterStatus(scenario, clusterNum);
+            if (statusCounts[status] !== undefined) {
+              statusCounts[status]++;
+            }
+          }
+        });
+
+        return statusCounts;
+      }
+
+      getAllKecamatan() {
+        return Object.keys(this.masterData);
+      }
+
+      getTotalStats() {
+        let totalKecamatan = 0;
+        let totalKontak = 0;
+
+        Object.values(this.masterData).forEach(data => {
+          totalKecamatan++;
+          totalKontak += data.total_kontak || 0;
+        });
+
+        return {
+          totalKecamatan,
+          totalKontak,
+          avgKontak: totalKecamatan > 0 ? Math.round(totalKontak / totalKecamatan) : 0
+        };
+      }
+    }
+
+    // Enhanced clustering configuration
+    const clusteringConfig = {
+      1: {
+        name: "Paparan Kontak TB & Umur",
+        description: "Clustering berdasarkan profil demografi dan paparan kontak TB",
+        clusters: 4
+      },
+      2: {
+        name: "Gejala Klinis",
+        description: "Clustering berdasarkan manifestasi gejala klinis kontak TB",
+        clusters: 5
+      },
+      3: {
+        name: "Faktor Risiko Individu",
+        description: "Clustering berdasarkan faktor risiko individu kontak TB",
+        clusters: 4
+      },
+      4: {
+        name: "Demografi Kontak TB",
+        description: "Clustering berdasarkan karakteristik demografi kontak TB",
+        clusters: 8
+      },
+      5: {
+        name: "Alur Pasien & Beban Layanan",
+        description: "Clustering berdasarkan alur pasien dan beban layanan kesehatan",
+        clusters: 4
+      },
+      6: {
+        name: "Geospasial & Akses Layanan",
+        description: "Clustering berdasarkan lokasi geografis dan akses layanan",
+        clusters: 6
+      }
+    };
+
+    // Global variables
+    const dataLoader = new ImprovedDataLoader();
+    let map, markersLayer, areasLayer;
+    let currentClustering = 1;
+    let selectedKecamatan = null;
+    let kecamatanListExpanded = true;
+    let legendExpanded = true;
+    let boundariesData = {};
+    let boundariesLoaded = false;
+    let colorMode = 'status'; // 'status' or 'cluster'
+
+    // === Boundaries Cache ===
+    const BOUNDARY_CACHE_KEY = 'webgis_boundaries_v1';
+    let isReloadingBoundaries = false;
+
+    function loadBoundariesFromCache() {
+      try {
+        const raw = localStorage.getItem(BOUNDARY_CACHE_KEY);
+        if (!raw) return false;
+        const parsed = JSON.parse(raw);
+        if (!parsed || typeof parsed !== 'object') return false;
+        boundariesData = parsed;
+        boundariesLoaded = true;
+        console.log('🗂️ Boundaries loaded from cache');
+        updateBoundariesStatus('success', 'Batas kecamatan dimuat dari cache.');
+        return true;
+      } catch (e) {
+        console.warn('Cache read failed:', e);
+        return false;
+      }
+    }
+
+    function saveBoundariesToCache() {
+      try {
+        localStorage.setItem(BOUNDARY_CACHE_KEY, JSON.stringify(boundariesData));
+        console.log('💾 Boundaries cached to localStorage');
+      } catch (e) {
+        console.warn('Cache save failed:', e);
+      }
+    }
+
+
+    // FIXED: Add missing boundary-related functions
+    function createBoundariesLoadingIndicator() {
+      const indicator = document.getElementById('boundaries-status');
+      if (indicator) {
+        indicator.classList.add('show', 'loading');
+        document.getElementById('boundaries-text').textContent = 'Loading boundaries from OpenStreetMap...';
+        return indicator;
+      }
+      return null;
+    }
+
+    function updateBoundariesStatus(status, message) {
+      const indicator = document.getElementById('boundaries-status');
+      if (indicator) {
+        indicator.classList.remove('loading', 'success', 'error');
+        indicator.classList.add('show', status);
+        document.getElementById('boundaries-text').textContent = message;
+
+        // Hide after 3 seconds for success/error
+        if (status !== 'loading') {
+          setTimeout(() => {
+            indicator.classList.remove('show');
+          }, 3000);
+        }
+      }
+    }
+
+    // FIXED: Implement loadBoundariesFromOSM function
+    // async function loadBoundariesFromOSM() {
+    //   try {
+    //     updateBoundariesStatus('loading', 'Loading administrative boundaries...');
+
+    //     // Get list of kecamatan from our data
+    //     const kecamatanList = dataLoader.getAllKecamatan();
+    //     console.log('🗺️ Loading boundaries for', kecamatanList.length, 'kecamatan');
+
+    //     let successCount = 0;
+    //     const failedKecamatan = [];
+
+    //     for (const kecamatanKey of kecamatanList) {
+    //       const data = dataLoader.getKecamatanData(kecamatanKey);
+    //       if (!data || !data.latitude || !data.longitude) continue;
+
+    //       try {
+    //         // First try to load from local GeoJSON if available
+    //         const localBoundary = await loadLocalBoundary(kecamatanKey);
+    //         if (localBoundary) {
+    //           boundariesData[kecamatanKey] = localBoundary;
+    //           successCount++;
+    //           continue;
+    //         }
+
+    //         // Fallback: Create simple circular boundary from center point
+    //         const boundary = createCircularBoundary(data.latitude, data.longitude, kecamatanKey);
+    //         boundariesData[kecamatanKey] = boundary;
+    //         successCount++;
+
+    //       } catch (error) {
+    //         console.warn('⚠️ Failed to load boundary for:', kecamatanKey, error);
+    //         failedKecamatan.push(kecamatanKey);
+
+    //         // Create fallback boundary
+    //         const boundary = createCircularBoundary(data.latitude, data.longitude, kecamatanKey);
+    //         boundariesData[kecamatanKey] = boundary;
+    //         successCount++;
+    //       }
+
+    //       // Small delay to avoid overwhelming requests
+    //       await new Promise(resolve => setTimeout(resolve, 100));
+    //     }
+
+    //     console.log(`✅ Boundaries loaded: ${successCount}/${kecamatanList.length}`);
+
+    //     if (failedKecamatan.length > 0) {
+    //       console.log('⚠️ Failed boundaries (using fallback):', failedKecamatan);
+    //       updateBoundariesStatus('success', `Boundaries loaded (${successCount} loaded, ${failedKecamatan.length} fallback)`);
+    //     } else {
+    //       updateBoundariesStatus('success', `All ${successCount} boundaries loaded successfully`);
+    //     }
+
+    //     boundariesLoaded = true;
+    //     return true;
+
+    //   } catch (error) {
+    //     console.error('❌ Error loading boundaries:', error);
+    //     updateBoundariesStatus('error', 'Failed to load boundaries: ' + error.message);
+    //     throw error;
+    //   }
+    // }
+
+    // Util: bungkus GeoJSON dari Nominatim menjadi FeatureCollection yang dipahami Leaflet
+    function toFeatureCollection(geom, props = {}) {
+      // Nominatim bisa mengembalikan Polygon/MultiPolygon/LineString
+      // Kita pastikan jadi Polygon/MultiPolygon (LineString dilewati).
+      if (!geom || !geom.type) return null;
+      if (geom.type === 'LineString' || geom.type === 'MultiLineString') return null;
+
+      const feature = {
+        type: 'Feature',
+        properties: { ...props, source: 'nominatim' },
+        geometry: geom.type === 'Polygon' || geom.type === 'MultiPolygon'
+          ? geom
+          : null
+      };
+      if (!feature.geometry) return null;
+
+      return { type: 'FeatureCollection', features: [feature] };
+    }
+
+    // Versi Nominatim: ambil batas admin per kecamatan (+warna akan diatur oleh loadSingleClustering)
+    async function loadBoundariesFromNominatim() {
+      try {
+        updateBoundariesStatus('loading', 'Mengambil batas administratif (Nominatim)…');
+
+        const kecamatanList = dataLoader.getAllKecamatan();
+        console.log('🗺️ Nominatim: memuat boundaries untuk', kecamatanList.length, 'kecamatan');
+
+        let ok = 0, miss = 0;
+
+        for (const kecKey of kecamatanList) {
+          const row = dataLoader.getKecamatanData(kecKey);
+          if (!row) continue;
+
+          const kecamatanName = (row.Kecamatan || '').replace(/^Kecamatan\s+/i, '').trim();
+          const kabkota = /gowa/i.test(row.Wilayah) ? 'Gowa' : 'Makassar';
+
+          // Query ramah Nominatim: polygon_geojson=1 + limit=1
+          const q = `${kecamatanName}, ${kabkota}, South Sulawesi, Indonesia`;
+          const url = `https://nominatim.openstreetmap.org/search?format=json&polygon_geojson=1&addressdetails=1&limit=1&q=${encodeURIComponent(q)}`;
+
+          try {
+            const res = await fetch(url, {
+              headers: {
+                // Browser akan set User-Agent sendiri; referer otomatis dari halaman
+                // Tambahkan email/identitas proyek di sini jika perlu sesuai ToS Nominatim
+              }
+            });
+            const results = await res.json();
+
+            // Pilih hasil terbaik: boundary administratif dengan geojson
+            const best = results.find(r =>
+              r && r.geojson &&
+              (r.class === 'boundary' || /administrative/i.test(r.type || ''))
+            ) || results[0];
+
+            const fc = best ? toFeatureCollection(best.geojson, {
+              name: kecamatanName,
+              kabkota
+            }) : null;
+
+            if (fc) {
+              boundariesData[kecKey] = fc;
+              ok++;
+              console.log(`✅ Nominatim OK: ${kecamatanName}`);
+            } else {
+              // fallback kecil (oktagon) agar tetap ada area
+              boundariesData[kecKey] = createPolygonBoundary(row.latitude, row.longitude, kecamatanName);
+              miss++;
+              console.warn(`⚠️ Nominatim kosong → pakai fallback: ${kecamatanName}`);
+            }
+          } catch (e) {
+            // error network → fallback
+            boundariesData[kecKey] = createPolygonBoundary(row.latitude, row.longitude, kecamatanName);
+            miss++;
+            console.warn(`❌ Gagal Nominatim untuk ${kecamatanName}:`, e);
+          }
+
+          // Hormati rate-limit Nominatim: ≤1 req/detik
+          await new Promise(r => setTimeout(r, 1100));
+        }
+
+        console.log(`🏁 Nominatim selesai. ${ok} boundary, ${miss} fallback.`);
+        updateBoundariesStatus('success', `Boundaries dimuat (${ok} Nominatim, ${miss} fallback)`);
+        boundariesLoaded = true;
+        return true;
+      } catch (err) {
+        console.error('❌ Error Nominatim:', err);
+        updateBoundariesStatus('error', 'Gagal memuat boundaries (Nominatim).');
+        throw err;
+      }
+    }
+
+
+    // Try to load local GeoJSON boundary file
+    async function loadLocalBoundary(kecamatanKey) {
+      try {
+        // Clean kecamatan name for filename
+        const cleanName = kecamatanKey.replace(/[^a-zA-Z0-9]/g, '_').toLowerCase();
+        const response = await fetch(`./webgis-input/boundaries/${cleanName}.geojson`);
+
+        if (response.ok) {
+          const geojson = await response.json();
+          console.log('✅ Loaded local boundary for:', kecamatanKey);
+          return geojson;
+        }
+        return null;
+      } catch (error) {
+        return null;
+      }
+    }
+
+    // Create circular boundary as fallback
+    function createCircularBoundary(lat, lng, kecamatanKey) {
+      // Create a circular polygon around the center point
+      const radius = 0.03; // ~3km radius in degrees (approximate)
+      const points = [];
+      const numPoints = 16;
+
+      for (let i = 0; i < numPoints; i++) {
+        const angle = (2 * Math.PI * i) / numPoints;
+        const pointLat = lat + radius * Math.cos(angle);
+        const pointLng = lng + radius * Math.sin(angle);
+        points.push([pointLng, pointLat]); // GeoJSON format: [lng, lat]
+      }
+
+      // Close the polygon
+      points.push(points[0]);
+
+      return {
+        type: "FeatureCollection",
+        features: [
+          {
+            type: "Feature",
+            properties: {
+              name: kecamatanKey,
+              type: "circular_boundary"
+            },
+            geometry: {
+              type: "Polygon",
+              coordinates: [points]
+            }
+          }
+        ]
+      };
+    }
+
+    // Initialize application
+    async function initializeApp() {
+      const loadingElement = document.getElementById('loading');
+
+      try {
+        console.log('🚀 Initializing WebGIS Application...');
+
+        const success = await dataLoader.loadData();
+
+        if (success) {
+          console.log('✅ Data loaded successfully');
+          initMap();
+
+          // Auto-load boundaries
+          console.log('🗺️ Loading boundaries...');
+          try {
+            // await loadBoundariesFromOSM();
+            // await loadBoundariesFromNominatim();
+            // boundariesLoaded = true;
+            // console.log('✅ Boundaries loaded successfully');
+            console.log('🗺️ Checking cached boundaries...');
+            loadBoundariesFromCache(); // cepat, tanpa fetch
+          } catch (error) {
+            console.error('❌ Error loading boundaries:', error);
+            // Continue without boundaries
+          }
+
+          loadClustering(currentClustering);
+          setupEventListeners();
+          loadingElement.style.display = 'none';
+          // updateBoundariesStatus('loading', 'Klik “Reload Batas” untuk menampilkan poligon kecamatan (sekali saja).');
+        } else {
+          throw new Error('Failed to load data');
+        }
+      } catch (error) {
+        console.error('❌ Initialization error:', error);
+        showErrorMessage(error.message);
+      }
+    }
+
+    function showErrorMessage(message) {
+      const loadingElement = document.getElementById('loading');
+      loadingElement.innerHTML = `
+        <div class="error-message">
+          <h3>Error Loading Data</h3>
+          <p>Pastikan file JSON tersedia dan server web berjalan.</p>
+          <p><strong>Error:</strong> ${message}</p>
+          <button onclick="location.reload()" style="margin-top:15px;padding:8px 16px;background:#3498db;color:white;border:none;border-radius:4px;cursor:pointer;">Reload Page</button>
+        </div>
+      `;
+    }
+
+    function initMap() {
+      map = L.map('map').setView([-5.2, 119.5], 10);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors',
+        maxZoom: 18
+      }).addTo(map);
+
+      markersLayer = L.layerGroup().addTo(map);
+      areasLayer = L.layerGroup().addTo(map);
+    }
+
+    function loadClustering(clusteringNum) {
+      if (!dataLoader || !dataLoader.isDataLoaded) {
+        console.warn('⚠️ Data not loaded yet');
+        return;
+      }
+
+      currentClustering = clusteringNum;
+      const config = clusteringConfig[clusteringNum];
+
+      // Update UI
+      document.getElementById('clustering-title').textContent = `Clustering ${config.name}`;
+      document.getElementById('clustering-desc').textContent = config.description;
+
+      loadSingleClustering(clusteringNum);
+      updateLegend();
+      updateKecamatanList();
+      updateStats();
+    }
+
+    function loadSingleClustering(clusteringNum) {
+      const clusterKey = `Cluster_S${clusteringNum}`;
+
+      // Clear existing layers
+      markersLayer.clearLayers();
+      areasLayer.clearLayers();
+
+      // Add areas and markers for each kecamatan
+      Object.keys(dataLoader.masterData).forEach(kecamatanKey => {
+        const data = dataLoader.masterData[kecamatanKey];
+        const clusterNum = data[clusterKey];
+        const status = dataLoader.getClusterStatus(clusteringNum, clusterNum);
+        const color = dataLoader.getCurrentColor(clusteringNum, clusterNum, colorMode);
+
+        if (data.latitude && data.longitude) {
+          // Add area boundary if available
+          if (boundariesLoaded && boundariesData[kecamatanKey]) {
+            const boundary = boundariesData[kecamatanKey];
+            const polygon = L.geoJSON(boundary, {
+              style: {
+                fillColor: color,
+                fillOpacity: 0.7,
+                color: color,
+                weight: 2,
+                opacity: 0.9,
+                className: 'kecamatan-area'
+              }
+            });
+
+            const tooltipText = colorMode === 'cluster'
+              ? `${data.Kecamatan} - Cluster ${clusterNum}`
+              : `${data.Kecamatan} - Status ${status}`;
+
+            polygon.bindTooltip(tooltipText, {
+              permanent: false,
+              direction: 'center',
+              className: 'custom-tooltip'
+            });
+
+            polygon.on('click', () => selectKecamatan(kecamatanKey));
+            polygon.on('mouseover', function (e) {
+              this.setStyle({
+                weight: 3,
+                fillOpacity: 0.8
+              });
+            });
+            polygon.on('mouseout', function (e) {
+              this.setStyle({
+                weight: 2,
+                fillOpacity: 0.7
+              });
+            });
+
+            areasLayer.addLayer(polygon);
+          }
+
+          // Create marker (smaller if boundaries are loaded)
+          const marker = L.circleMarker([data.latitude, data.longitude], {
+            radius: boundariesLoaded ? 6 : 10,
+            fillColor: color,
+            color: '#fff',
+            weight: 2,
+            opacity: 1,
+            fillOpacity: 0.9
+          });
+
+          const popupContent = createPopupContent(kecamatanKey, data, clusterNum, status);
+          marker.bindPopup(popupContent);
+          marker.on('click', () => selectKecamatan(kecamatanKey));
+          markersLayer.addLayer(marker);
+        }
+      });
+    }
+
+    function createPopupContent(kecamatanKey, data, clusterNum, status) {
+      const clusterLabel = dataLoader.getClusterLabel(currentClustering, clusterNum);
+      const statusColor = dataLoader.getStatusColor(status);
+
+      let demografiContent = '';
+      if (data.total_kontak) {
+        demografiContent = `
+          <div class="popup-demo">
+            <strong>Data Kontak:</strong><br>
+            Total: ${data.total_kontak.toLocaleString()} | Dirujuk: ${data.dirujuk || 0}<br>
+            Rata-rata umur: ${data.rata_rata_umur?.toFixed(1)} tahun<br>
+            Fasyankes: ${data.jumlah_fasyankes_unik || 0}
+          </div>
+        `;
+      }
+
+      return `
+        <div class="popup-title">${data.Kecamatan}</div>
+        <div class="popup-cluster">${clusterLabel}</div>
+        <div class="popup-status" style="background-color: ${statusColor}">Status ${status}</div>
+        <div class="popup-info">
+          <strong>Koordinat:</strong> ${data.latitude?.toFixed(6)}, ${data.longitude?.toFixed(6)}<br>
+          <strong>Wilayah:</strong> ${data.Wilayah}
+          ${demografiContent}
+          <button onclick="showKecamatanDetail('${kecamatanKey}')" style="margin-top:8px;padding:4px 8px;background:#3498db;color:white;border:none;border-radius:4px;cursor:pointer;">Lihat Detail</button>
+        </div>
+      `;
+    }
+
+    function updateLegend() {
+      const legendContainer = document.getElementById('legend-items');
+      legendContainer.innerHTML = '';
+
+      const config = clusteringConfig[currentClustering];
+      const stats = dataLoader.getClusterStatistics(currentClustering);
+      const statusStats = dataLoader.getStatusStatistics(currentClustering);
+
+      if (colorMode === 'status') {
+        // Status-based legend
+        const statusSection = document.createElement('div');
+        statusSection.innerHTML = '<div class="legend-section-title">🎯 Mode: Status</div>';
+
+        ['Rendah', 'Sedang', 'Tinggi'].forEach(status => {
+          const count = statusStats[status] || 0;
+          const color = dataLoader.getStatusColor(status);
+
+          const item = document.createElement('div');
+          item.className = 'legend-item';
+          item.innerHTML = `
+            <div class="legend-color" style="background-color: ${color}"></div>
+            <span>Status ${status}</span>
+            <span class="legend-count">${count} kec</span>
+          `;
+          statusSection.appendChild(item);
+        });
+
+        legendContainer.appendChild(statusSection);
+
+        // Add cluster reference
+        const clusterSection = document.createElement('div');
+        clusterSection.className = 'legend-section';
+        clusterSection.innerHTML = '<div class="legend-section-title">📊 Referensi Cluster</div>';
+
+        for (let i = 0; i < config.clusters; i++) {
+          const count = stats[i] || 0;
+          const label = dataLoader.getClusterLabel(currentClustering, i);
+          const status = dataLoader.getClusterStatus(currentClustering, i);
+          const statusColor = dataLoader.getStatusColor(status);
+
+          const item = document.createElement('div');
+          item.className = 'legend-item';
+          item.style.opacity = '0.7';
+          item.innerHTML = `
+            <div class="legend-color" style="background-color: ${statusColor}; opacity: 0.5;"></div>
+            <span>${label} → ${status}</span>
+            <span class="legend-count">${count} kec</span>
+          `;
+          clusterSection.appendChild(item);
+        }
+
+        legendContainer.appendChild(clusterSection);
+      } else {
+        // Cluster-based legend
+        const clusterSection = document.createElement('div');
+        clusterSection.innerHTML = '<div class="legend-section-title">📊 Mode: Cluster</div>';
+
+        for (let i = 0; i < config.clusters; i++) {
+          const count = stats[i] || 0;
+          const label = dataLoader.getClusterLabel(currentClustering, i);
+          const clusterColor = dataLoader.getClusterColor(currentClustering, i);
+
+          const item = document.createElement('div');
+          item.className = 'legend-item';
+          item.innerHTML = `
+            <div class="legend-color" style="background-color: ${clusterColor}"></div>
+            <span>${label}</span>
+            <span class="legend-count">${count} kec</span>
+          `;
+          clusterSection.appendChild(item);
+        }
+
+        legendContainer.appendChild(clusterSection);
+
+        // Add status reference
+        const statusSection = document.createElement('div');
+        statusSection.className = 'legend-section';
+        statusSection.innerHTML = '<div class="legend-section-title">🎯 Referensi Status</div>';
+
+        for (let i = 0; i < config.clusters; i++) {
+          const count = stats[i] || 0;
+          const label = dataLoader.getClusterLabel(currentClustering, i);
+          const status = dataLoader.getClusterStatus(currentClustering, i);
+          const clusterColor = dataLoader.getClusterColor(currentClustering, i);
+
+          const item = document.createElement('div');
+          item.className = 'legend-item';
+          item.style.opacity = '0.7';
+          item.innerHTML = `
+            <div class="legend-color" style="background-color: ${clusterColor}; opacity: 0.5;"></div>
+            <span>${label} → ${status}</span>
+            <span class="legend-count">${count} kec</span>
+          `;
+          statusSection.appendChild(item);
+        }
+
+        legendContainer.appendChild(statusSection);
+      }
+    }
+
+    function updateKecamatanList() {
+      const container = document.getElementById('kecamatan-items');
+      const countElement = document.getElementById('kecamatan-count');
+      container.innerHTML = '';
+
+      const kecamatanList = dataLoader.getAllKecamatan();
+      countElement.textContent = kecamatanList.length;
+
+      kecamatanList.forEach(kecamatanKey => {
+        const data = dataLoader.masterData[kecamatanKey];
+        const clusterKey = `Cluster_S${currentClustering}`;
+        const clusterNum = data[clusterKey];
+        const label = dataLoader.getClusterLabel(currentClustering, clusterNum);
+        const status = dataLoader.getClusterStatus(currentClustering, clusterNum);
+        const statusColor = dataLoader.getStatusColor(status);
+
+        const item = document.createElement('div');
+        item.className = 'kecamatan-item';
+        item.onclick = () => selectKecamatan(kecamatanKey);
+
+        let statsContent = '';
+        if (data.total_kontak) {
+          statsContent = `
+            <div class="kecamatan-stats">
+              ${Math.round(data.total_kontak).toLocaleString()} kontak | ${data.jumlah_fasyankes_unik || 0} fasyankes
+            </div>
+          `;
+        }
+
+        item.innerHTML = `
+          <div class="kecamatan-name">${data.Kecamatan}</div>
+          <div class="kecamatan-cluster" style="background-color: ${statusColor};">
+            ${label}
+          </div>
+          <div class="kecamatan-status status-${status.toLowerCase()}">${status}</div>
+          <div class="kecamatan-location">${data.Wilayah}</div>
+          ${statsContent}
+        `;
+
+        container.appendChild(item);
+      });
+    }
+
+    function updateStats() {
+      const stats = dataLoader.getTotalStats();
+      const clusterStats = dataLoader.getClusterStatistics(currentClustering);
+      const statusStats = dataLoader.getStatusStatistics(currentClustering);
+
+      document.getElementById('total-kecamatan').textContent = stats.totalKecamatan;
+      document.getElementById('total-clusters').textContent = Object.keys(clusterStats).length;
+      document.getElementById('status-tinggi').textContent = statusStats['Tinggi'] || 0;
+      document.getElementById('avg-contacts').textContent = stats.avgKontak.toLocaleString();
+    }
+
+    function selectKecamatan(kecamatanKey) {
+      selectedKecamatan = kecamatanKey;
+
+      // Update UI
+      document.querySelectorAll('.kecamatan-item').forEach(item => {
+        item.classList.remove('selected');
+      });
+
+      const selectedItem = Array.from(document.querySelectorAll('.kecamatan-item'))
+        .find(item => item.innerHTML.includes(dataLoader.masterData[kecamatanKey]?.Kecamatan));
+      if (selectedItem) {
+        selectedItem.classList.add('selected');
+      }
+
+      // Show on map
+      const data = dataLoader.masterData[kecamatanKey];
+      if (map && data && data.latitude && data.longitude) {
+        map.setView([data.latitude, data.longitude], 13);
+
+        // Find and open popup
+        markersLayer.eachLayer(layer => {
+          if (Math.abs(layer.getLatLng().lat - data.latitude) < 0.001 &&
+            Math.abs(layer.getLatLng().lng - data.longitude) < 0.001) {
+            layer.openPopup();
+          }
+        });
+      }
+    }
+
+    function showKecamatanDetail(kecamatanKey) {
+      const data = dataLoader.masterData[kecamatanKey];
+      const interpretasiData = dataLoader.getInterpretasiData(kecamatanKey, currentClustering);
+
+      if (!data) {
+        console.warn('⚠️ Data not found for kecamatan:', kecamatanKey);
+        return;
+      }
+
+      document.getElementById('info-title').textContent = data.Kecamatan;
+      document.getElementById('info-location').textContent = data.Wilayah;
+
+      // Create summary cards
+      const clusterKey = `Cluster_S${currentClustering}`;
+      const clusterNum = data[clusterKey];
+      const clusterLabel = dataLoader.getClusterLabel(currentClustering, clusterNum);
+      const status = dataLoader.getClusterStatus(currentClustering, clusterNum);
+      const statusColor = dataLoader.getStatusColor(status);
+
+      let summaryContent = `
+        <div class="info-summary">
+          <div class="summary-card">
+            <div class="summary-title">Cluster</div>
+            <div class="summary-value" style="color: ${statusColor}">${clusterNum}</div>
+            <div class="summary-subtitle">${clusterLabel}</div>
+          </div>
+          <div class="summary-card status-card ${status.toLowerCase()}">
+            <div class="summary-title">Status Risiko</div>
+            <div class="summary-value">${status}</div>
+            <div class="summary-subtitle">Analisis Otomatis</div>
+          </div>
+          <div class="summary-card">
+            <div class="summary-title">Total Kontak</div>
+            <div class="summary-value">${Math.round(data.total_kontak || 0).toLocaleString()}</div>
+            <div class="summary-subtitle">Dirujuk: ${data.dirujuk || 0}</div>
+          </div>
+        </div>
+      `;
+
+      // Add interpretasi content
+      let interpretasiContent = '';
+      if (interpretasiData) {
+        interpretasiContent = `
+          <div class="interpretation-section">
+            <div class="interpretation-title">Interpretasi Cluster</div>
+            <div class="interpretation-text">
+              ${interpretasiData.Interpretasi || 'Interpretasi tidak tersedia.'}
+            </div>
+          </div>
+        `;
+
+        // Add recommendation
+        if (interpretasiData.Rekomendasi) {
+          interpretasiContent += `
+            <div class="recommendation-section">
+              <div class="recommendation-title">
+                💡 Rekomendasi Intervensi
+              </div>
+              <div class="recommendation-text">
+                ${interpretasiData.Rekomendasi}
+              </div>
+            </div>
+          `;
+        }
+      } else {
+        interpretasiContent = `
+          <div class="interpretation-section">
+            <div class="interpretation-title">Interpretasi Cluster</div>
+            <div class="interpretation-text">
+              Interpretasi untuk skenario ${currentClustering} belum tersedia untuk kecamatan ini.
+            </div>
+          </div>
+        `;
+      }
+
+      document.getElementById('info-content').innerHTML = `
+        ${summaryContent}
+        <div style="margin-bottom: 15px;">
+          <strong>Koordinat:</strong> ${data.latitude?.toFixed(6)}, ${data.longitude?.toFixed(6)}<br>
+          <strong>Rata-rata Umur:</strong> ${data.rata_rata_umur?.toFixed(1)} tahun<br>
+          <strong>Fasyankes:</strong> ${data.jumlah_fasyankes_unik || 0} unit
+        </div>
+        ${interpretasiContent}
+        <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid #ecf0f1; font-size: 11px; color: #7f8c8d; font-style: italic;">
+          Data clustering berdasarkan analisis kontak tuberkulosis di wilayah Makassar dan Gowa.
+        </div>
+      `;
+
+      document.getElementById('info-panel').classList.add('show');
+    }
+
+    function toggleColorMode() {
+      colorMode = colorMode === 'status' ? 'cluster' : 'status';
+      const btn = document.getElementById('color-mode-btn');
+      btn.textContent = colorMode === 'status' ? 'Mode: Status' : 'Mode: Cluster';
+
+      // Reload current clustering with new color mode
+      loadClustering(currentClustering);
+    }
+
+    function toggleLegend() {
+      legendExpanded = !legendExpanded;
+      const content = document.getElementById('legend-content');
+      const toggle = document.getElementById('legend-toggle');
+
+      if (legendExpanded) {
+        content.classList.remove('collapsed');
+        toggle.classList.remove('collapsed');
+      } else {
+        content.classList.add('collapsed');
+        toggle.classList.add('collapsed');
+      }
+    }
+
+    function toggleKecamatanList() {
+      kecamatanListExpanded = !kecamatanListExpanded;
+      const itemsContainer = document.getElementById('kecamatan-items');
+      const toggleIcon = document.getElementById('toggle-icon');
+
+      if (kecamatanListExpanded) {
+        itemsContainer.classList.remove('collapsed');
+        toggleIcon.classList.add('expanded');
+      } else {
+        itemsContainer.classList.add('collapsed');
+        toggleIcon.classList.remove('expanded');
+      }
+    }
+
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('collapsed');
+    }
+
+    function showAllClusters() {
+      if (map) {
+        map.setView([-5.2, 119.5], 10);
+      }
+      selectedKecamatan = null;
+      document.querySelectorAll('.kecamatan-item').forEach(item => {
+        item.classList.remove('selected');
+      });
+    }
+
+    function toggleInterpretasi() {
+      const panel = document.getElementById('info-panel');
+      if (panel.classList.contains('show')) {
+        closeInfoPanel();
+      } else if (selectedKecamatan) {
+        showKecamatanDetail(selectedKecamatan);
+      } else {
+        showGeneralInfo();
+      }
+    }
+
+    function showGeneralInfo() {
+      document.getElementById('info-title').textContent = 'Interpretasi Umum Clustering';
+      document.getElementById('info-location').textContent = 'Makassar & Gowa';
+      document.getElementById('info-content').innerHTML = `
+        <div style="line-height: 1.8;">
+          <h4 style="color: #2c3e50; margin-bottom: 15px;">Sistem Clustering Kontak Tuberkulosis</h4>
+          <p style="margin-bottom: 15px;">Sistem ini menampilkan hasil clustering kontak tuberkulosis di wilayah Makassar dan Gowa berdasarkan 6 metode berbeda dengan analisis status risiko (Rendah, Sedang, Tinggi).</p>
+
+          <h5 style="color: #34495e; margin: 15px 0 10px 0;">Status Risiko:</h5>
+          <div style="margin-bottom: 15px;">
+            <div style="display: flex; align-items: center; margin-bottom: 5px;">
+              <div style="width: 16px; height: 16px; background: #27ae60; border-radius: 50%; margin-right: 8px;"></div>
+              <span><strong>Rendah:</strong> Prioritas pemantauan rutin</span>
+            </div>
+            <div style="display: flex; align-items: center; margin-bottom: 5px;">
+              <div style="width: 16px; height: 16px; background: #f39c12; border-radius: 50%; margin-right: 8px;"></div>
+              <span><strong>Sedang:</strong> Perlu perhatian dan intervensi terfokus</span>
+            </div>
+            <div style="display: flex; align-items: center; margin-bottom: 5px;">
+              <div style="width: 16px; height: 16px; background: #e74c3c; border-radius: 50%; margin-right: 8px;"></div>
+              <span><strong>Tinggi:</strong> Prioritas utama, perlu intervensi segera</span>
+            </div>
+          </div>
+
+          <h5 style="color: #34495e; margin: 15px 0 10px 0;">Metode Clustering:</h5>
+          <ul style="margin-left: 20px; margin-bottom: 15px;">
+            <li><strong>Paparan & Umur:</strong> Profil demografi dan intensitas paparan</li>
+            <li><strong>Gejala Klinis:</strong> Manifestasi symptoms TB</li>
+            <li><strong>Faktor Risiko:</strong> Kondisi predisposisi individual</li>
+            <li><strong>Demografi:</strong> Karakteristik populasi kontak</li>
+            <li><strong>Alur & Beban:</strong> Sistem rujukan dan kapasitas layanan</li>
+            <li><strong>Geospasial:</strong> Lokasi dan aksesibilitas layanan</li>
+          </ul>
+
+          <div style="background: #e8f5e8; padding: 12px; border-radius: 6px; border-left: 4px solid #2ecc71;">
+            <strong>Cara Penggunaan:</strong><br>
+            • Pilih metode clustering dari sidebar<br>
+            • Klik wilayah/marker untuk detail analisis<br>
+            • Perhatikan warna marker yang menunjukkan status risiko<br>
+            • Baca interpretasi dan rekomendasi untuk setiap wilayah
+          </div>
+        </div>
+      `;
+      document.getElementById('info-panel').classList.add('show');
+    }
+
+    function closeInfoPanel() {
+      document.getElementById('info-panel').classList.remove('show');
+    }
+
+    async function reloadBoundaries() {
+      if (boundariesLoaded && Object.keys(boundariesData).length > 0) {
+        updateBoundariesStatus('success', 'Batas sudah tersedia. Tidak perlu memuat ulang.');
+        return;
+      }
+
+      if (loadBoundariesFromCache()) {
+        loadClustering(currentClustering);
+        return;
+      }
+
+      if (isReloadingBoundaries) {
+        updateBoundariesStatus('loading', 'Sedang memuat batas…');
+        return;
+      }
+
+      isReloadingBoundaries = true;
+      updateBoundariesStatus('loading', 'Mengambil batas administratif… (sekali saja)');
+
+      try {
+        console.log('🔄 First-time boundary fetch…');
+        boundariesData = {};
+        boundariesLoaded = false;
+
+        await loadBoundariesFromNominatim();
+
+        saveBoundariesToCache();
+        boundariesLoaded = true;
+
+        loadClustering(currentClustering);
+        console.log('✅ Boundaries available & cached');
+        updateBoundariesStatus('success', 'Batas berhasil dimuat & disimpan.');
+      } catch (error) {
+        console.error('❌ Error reloading boundaries:', error);
+        updateBoundariesStatus('error', 'Gagal memuat batas administratif.');
+      } finally {
+        isReloadingBoundaries = false;
+      }
+    }
+
+    function setupEventListeners() {
+      // Clustering buttons
+      document.querySelectorAll('.clustering-btn').forEach(btn => {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.clustering-btn').forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          const clustering = parseInt(this.dataset.clustering);
+          loadClustering(clustering);
+        });
+      });
+
+      // Keyboard shortcuts
+      document.addEventListener('keydown', function (e) {
+        if (e.key >= '1' && e.key <= '6') {
+          const clustering = parseInt(e.key);
+          const button = document.querySelector(`[data-clustering="${clustering}"]`);
+          if (button) button.click();
+        }
+        if (e.key === 'Escape') {
+          closeInfoPanel();
+        }
+        if (e.key === 'r' || e.key === 'R') {
+          showAllClusters();
+        }
+        if (e.key === 'l' || e.key === 'L') {
+          toggleLegend();
+        }
+      });
+
+      // Window resize
+      window.addEventListener('resize', () => {
+        if (map) {
+          setTimeout(() => map.invalidateSize(), 100);
+        }
+      });
+
+      console.log('✅ Event listeners setup complete');
+    }
+
+    // Initialize app when DOM is loaded
+    document.addEventListener('DOMContentLoaded', function () {
+      console.log('📄 DOM loaded, initializing app...');
+      initializeApp();
+    });
+
+    // Global access for debugging
+    window.debugWebGIS = function () {
+      return {
+        dataLoader: dataLoader,
+        currentClustering: currentClustering,
+        selectedKecamatan: selectedKecamatan,
+        map: map,
+        clusteringConfig: clusteringConfig,
+        boundariesData: boundariesData
+      };
+    };
+  </script>
+</body>
+
+</html>

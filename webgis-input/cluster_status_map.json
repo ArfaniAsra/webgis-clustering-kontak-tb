@@ -1,0 +1,45 @@
+{
+  "S1": {
+    "3": "Rendah",
+    "0": "Sedang",
+    "2": "Tinggi",
+    "1": "Tinggi"
+  },
+  "S2": {
+    "3": "Rendah",
+    "1": "Sedang",
+    "4": "Sedang",
+    "0": "Tinggi",
+    "2": "Tinggi"
+  },
+  "S3": {
+    "3": "Rendah",
+    "1": "Sedang",
+    "0": "Tinggi",
+    "2": "Tinggi"
+  },
+  "S4": {
+    "5": "Rendah",
+    "3": "Rendah",
+    "4": "Sedang",
+    "6": "Sedang",
+    "0": "Sedang",
+    "7": "Tinggi",
+    "2": "Tinggi",
+    "1": "Tinggi"
+  },
+  "S5": {
+    "0": "Rendah",
+    "1": "Sedang",
+    "3": "Tinggi",
+    "2": "Tinggi"
+  },
+  "S6": {
+    "3": "Rendah",
+    "4": "Rendah",
+    "5": "Sedang",
+    "2": "Sedang",
+    "0": "Tinggi",
+    "1": "Tinggi"
+  }
+}

@@ -1,0 +1,1502 @@
+[
+  {
+    "kecamatan_full":"Bajeng Barat, Kabupaten Gowa",
+    "Kecamatan":"Bajeng Barat",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S1",
+    "Cluster_ID":2,
+    "Cluster_Label":"Cluster 2",
+    "Ringkasan":"Jumlah kontak 5455 orang, proporsi kontak serumah 19.36%, rata-rata umur 34.39 tahun.",
+    "Interpretasi":"Kecamatan Bajeng Barat memiliki 5455 kontak dengan sekitar 19.36% tinggal serumah. Rata-rata umur kontak 34.39 tahun, menunjukkan dominasi usia dewasa produktif."
+  },
+  {
+    "kecamatan_full":"Bajeng Barat, Kabupaten Gowa",
+    "Kecamatan":"Bajeng Barat",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S2",
+    "Cluster_ID":4,
+    "Cluster_Label":"Cluster 4",
+    "Ringkasan":"Batuk 12.12%, sesak nafas 5.65%, keringat malam 0.38%, demam meriang 0.05%.",
+    "Interpretasi":"Gejala klinis TB di Bajeng Barat ditandai dengan batuk pada 12.12% kontak. Keluhan lain seperti sesak nafas (5.65%), keringat malam (0.38%), dan demam meriang (0.05%) muncul dengan frekuensi lebih rendah."
+  },
+  {
+    "kecamatan_full":"Bajeng Barat, Kabupaten Gowa",
+    "Kecamatan":"Bajeng Barat",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S3",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Ibu hamil 0%, lansia 11.44%, diabetes 0.13%, perokok 2.14%, tidak tuntas berobat 0.02%.",
+    "Interpretasi":"Faktor risiko di Bajeng Barat meliputi 2.14% perokok, 11.44% lansia, 0% ibu hamil, serta 0.13% dengan diabetes mellitus. Sebanyak 0.02% memiliki riwayat pengobatan tidak tuntas."
+  },
+  {
+    "kecamatan_full":"Bajeng Barat, Kabupaten Gowa",
+    "Kecamatan":"Bajeng Barat",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S4",
+    "Cluster_ID":7,
+    "Cluster_Label":"Cluster 7",
+    "Ringkasan":"Penduduk Laki-Laki 48.84%, Perempuan 51.16%, rata-rata umur 34.39 tahun.",
+    "Interpretasi":"Demografi Bajeng Barat cukup seimbang dengan 48.84% Laki-Laki dan 51.16% Perempuan. Rata-rata umur penduduk adalah 34.39 tahun."
+  },
+  {
+    "kecamatan_full":"Bajeng Barat, Kabupaten Gowa",
+    "Kecamatan":"Bajeng Barat",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S5",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Jumlah kontak 5455 orang, dirujuk 678 (12.43%), fasilitas kesehatan 1.",
+    "Interpretasi":"Di Bajeng Barat, dari 5455 kontak terdapat 678 (12.43%) yang dirujuk. Jumlah fasilitas kesehatan yang tercatat adalah 1 unit."
+  },
+  {
+    "kecamatan_full":"Bajeng Barat, Kabupaten Gowa",
+    "Kecamatan":"Bajeng Barat",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S6",
+    "Cluster_ID":5,
+    "Cluster_Label":"Cluster 5",
+    "Ringkasan":"Lokasi koordinat (-5.29, 119.391), jumlah fasilitas kesehatan 1.",
+    "Interpretasi":"Kecamatan Bajeng Barat terletak pada koordinat lintang -5.29 dan bujur 119.391. Terdapat 1 fasilitas kesehatan yang melayani wilayah ini."
+  },
+  {
+    "kecamatan_full":"Bajeng, Kabupaten Gowa",
+    "Kecamatan":"Bajeng",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S1",
+    "Cluster_ID":2,
+    "Cluster_Label":"Cluster 2",
+    "Ringkasan":"Jumlah kontak 976 orang, proporsi kontak serumah 18.36%, rata-rata umur 33.42 tahun.",
+    "Interpretasi":"Kecamatan Bajeng memiliki 976 kontak dengan sekitar 18.36% tinggal serumah. Rata-rata umur kontak 33.42 tahun, menunjukkan dominasi usia dewasa produktif."
+  },
+  {
+    "kecamatan_full":"Bajeng, Kabupaten Gowa",
+    "Kecamatan":"Bajeng",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S2",
+    "Cluster_ID":4,
+    "Cluster_Label":"Cluster 4",
+    "Ringkasan":"Batuk 11.83%, sesak nafas 5.03%, keringat malam 0.5%, demam meriang 0.14%.",
+    "Interpretasi":"Gejala klinis TB di Bajeng ditandai dengan batuk pada 11.83% kontak. Keluhan lain seperti sesak nafas (5.03%), keringat malam (0.5%), dan demam meriang (0.14%) muncul dengan frekuensi lebih rendah."
+  },
+  {
+    "kecamatan_full":"Bajeng, Kabupaten Gowa",
+    "Kecamatan":"Bajeng",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S3",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Ibu hamil 0.08%, lansia 9.61%, diabetes 0.25%, perokok 5.87%, tidak tuntas berobat 0.02%.",
+    "Interpretasi":"Faktor risiko di Bajeng meliputi 5.87% perokok, 9.61% lansia, 0.08% ibu hamil, serta 0.25% dengan diabetes mellitus. Sebanyak 0.02% memiliki riwayat pengobatan tidak tuntas."
+  },
+  {
+    "kecamatan_full":"Bajeng, Kabupaten Gowa",
+    "Kecamatan":"Bajeng",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S4",
+    "Cluster_ID":6,
+    "Cluster_Label":"Cluster 6",
+    "Ringkasan":"Penduduk Laki-Laki 48.12%, Perempuan 51.88%, rata-rata umur 33.42 tahun.",
+    "Interpretasi":"Demografi Bajeng cukup seimbang dengan 48.12% Laki-Laki dan 51.88% Perempuan. Rata-rata umur penduduk adalah 33.42 tahun."
+  },
+  {
+    "kecamatan_full":"Bajeng, Kabupaten Gowa",
+    "Kecamatan":"Bajeng",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S5",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Jumlah kontak 976 orang, dirujuk 1154 (11.82%), fasilitas kesehatan 2.",
+    "Interpretasi":"Di Bajeng, dari 976 kontak terdapat 1154 (11.82%) yang dirujuk. Jumlah fasilitas kesehatan yang tercatat adalah 2 unit."
+  },
+  {
+    "kecamatan_full":"Bajeng, Kabupaten Gowa",
+    "Kecamatan":"Bajeng",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S6",
+    "Cluster_ID":5,
+    "Cluster_Label":"Cluster 5",
+    "Ringkasan":"Lokasi koordinat (-5.293, 119.437), jumlah fasilitas kesehatan 2.",
+    "Interpretasi":"Kecamatan Bajeng terletak pada koordinat lintang -5.293 dan bujur 119.437. Terdapat 2 fasilitas kesehatan yang melayani wilayah ini."
+  },
+  {
+    "kecamatan_full":"Biringbulu, Kabupaten Gowa",
+    "Kecamatan":"Biringbulu",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S1",
+    "Cluster_ID":0,
+    "Cluster_Label":"Cluster 0",
+    "Ringkasan":"Jumlah kontak 32 orang, proporsi kontak serumah 21.88%, rata-rata umur 39.5 tahun.",
+    "Interpretasi":"Kecamatan Biringbulu memiliki 32 kontak dengan sekitar 21.88% tinggal serumah. Rata-rata umur kontak 39.5 tahun, menunjukkan dominasi usia dewasa produktif."
+  },
+  {
+    "kecamatan_full":"Biringbulu, Kabupaten Gowa",
+    "Kecamatan":"Biringbulu",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S2",
+    "Cluster_ID":2,
+    "Cluster_Label":"Cluster 2",
+    "Ringkasan":"Batuk 37.5%, sesak nafas 0%, keringat malam 0%, demam meriang 0%.",
+    "Interpretasi":"Gejala klinis TB di Biringbulu ditandai dengan batuk pada 37.5% kontak. Keluhan lain seperti sesak nafas (0%), keringat malam (0%), dan demam meriang (0%) muncul dengan frekuensi lebih rendah."
+  },
+  {
+    "kecamatan_full":"Biringbulu, Kabupaten Gowa",
+    "Kecamatan":"Biringbulu",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S3",
+    "Cluster_ID":2,
+    "Cluster_Label":"Cluster 2",
+    "Ringkasan":"Ibu hamil 0%, lansia 6.25%, diabetes 0%, perokok 28.12%, tidak tuntas berobat 0%.",
+    "Interpretasi":"Faktor risiko di Biringbulu meliputi 28.12% perokok, 6.25% lansia, 0% ibu hamil, serta 0% dengan diabetes mellitus. Sebanyak 0% memiliki riwayat pengobatan tidak tuntas."
+  },
+  {
+    "kecamatan_full":"Biringbulu, Kabupaten Gowa",
+    "Kecamatan":"Biringbulu",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S4",
+    "Cluster_ID":1,
+    "Cluster_Label":"Cluster 1",
+    "Ringkasan":"Penduduk Laki-Laki 43.75%, Perempuan 56.25%, rata-rata umur 39.5 tahun.",
+    "Interpretasi":"Demografi Biringbulu cukup seimbang dengan 43.75% Laki-Laki dan 56.25% Perempuan. Rata-rata umur penduduk adalah 39.5 tahun."
+  },
+  {
+    "kecamatan_full":"Biringbulu, Kabupaten Gowa",
+    "Kecamatan":"Biringbulu",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S5",
+    "Cluster_ID":2,
+    "Cluster_Label":"Cluster 2",
+    "Ringkasan":"Jumlah kontak 32 orang, dirujuk 12 (37.5%), fasilitas kesehatan 1.",
+    "Interpretasi":"Di Biringbulu, dari 32 kontak terdapat 12 (37.5%) yang dirujuk. Jumlah fasilitas kesehatan yang tercatat adalah 1 unit."
+  },
+  {
+    "kecamatan_full":"Biringbulu, Kabupaten Gowa",
+    "Kecamatan":"Biringbulu",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S6",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Lokasi koordinat (-5.482, 119.736), jumlah fasilitas kesehatan 1.",
+    "Interpretasi":"Kecamatan Biringbulu terletak pada koordinat lintang -5.482 dan bujur 119.736. Terdapat 1 fasilitas kesehatan yang melayani wilayah ini."
+  },
+  {
+    "kecamatan_full":"Biringkanaya, Kota Makassar",
+    "Kecamatan":"Biringkanaya",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S1",
+    "Cluster_ID":2,
+    "Cluster_Label":"Cluster 2",
+    "Ringkasan":"Jumlah kontak 5553 orang, proporsi kontak serumah 25%, rata-rata umur 31.61 tahun.",
+    "Interpretasi":"Kecamatan Biringkanaya memiliki 5553 kontak dengan sekitar 25% tinggal serumah. Rata-rata umur kontak 31.61 tahun, menunjukkan dominasi usia dewasa produktif."
+  },
+  {
+    "kecamatan_full":"Biringkanaya, Kota Makassar",
+    "Kecamatan":"Biringkanaya",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S2",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Batuk 2.74%, sesak nafas 0.49%, keringat malam 0.07%, demam meriang 0.45%.",
+    "Interpretasi":"Gejala klinis TB di Biringkanaya ditandai dengan batuk pada 2.74% kontak. Keluhan lain seperti sesak nafas (0.49%), keringat malam (0.07%), dan demam meriang (0.45%) muncul dengan frekuensi lebih rendah."
+  },
+  {
+    "kecamatan_full":"Biringkanaya, Kota Makassar",
+    "Kecamatan":"Biringkanaya",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S3",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Ibu hamil 0.13%, lansia 6.52%, diabetes 0.11%, perokok 6.05%, tidak tuntas berobat 0.02%.",
+    "Interpretasi":"Faktor risiko di Biringkanaya meliputi 6.05% perokok, 6.52% lansia, 0.13% ibu hamil, serta 0.11% dengan diabetes mellitus. Sebanyak 0.02% memiliki riwayat pengobatan tidak tuntas."
+  },
+  {
+    "kecamatan_full":"Biringkanaya, Kota Makassar",
+    "Kecamatan":"Biringkanaya",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S4",
+    "Cluster_ID":4,
+    "Cluster_Label":"Cluster 4",
+    "Ringkasan":"Penduduk Laki-Laki 49.47%, Perempuan 50.53%, rata-rata umur 31.61 tahun.",
+    "Interpretasi":"Demografi Biringkanaya cukup seimbang dengan 49.47% Laki-Laki dan 50.53% Perempuan. Rata-rata umur penduduk adalah 31.61 tahun."
+  },
+  {
+    "kecamatan_full":"Biringkanaya, Kota Makassar",
+    "Kecamatan":"Biringkanaya",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S5",
+    "Cluster_ID":0,
+    "Cluster_Label":"Cluster 0",
+    "Ringkasan":"Jumlah kontak 5553 orang, dirujuk 139 (2.5%), fasilitas kesehatan 6.",
+    "Interpretasi":"Di Biringkanaya, dari 5553 kontak terdapat 139 (2.5%) yang dirujuk. Jumlah fasilitas kesehatan yang tercatat adalah 6 unit."
+  },
+  {
+    "kecamatan_full":"Biringkanaya, Kota Makassar",
+    "Kecamatan":"Biringkanaya",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S6",
+    "Cluster_ID":0,
+    "Cluster_Label":"Cluster 0",
+    "Ringkasan":"Lokasi koordinat (-5.113, 119.514), jumlah fasilitas kesehatan 6.",
+    "Interpretasi":"Kecamatan Biringkanaya terletak pada koordinat lintang -5.113 dan bujur 119.514. Terdapat 6 fasilitas kesehatan yang melayani wilayah ini."
+  },
+  {
+    "kecamatan_full":"Bontoala, Kota Makassar",
+    "Kecamatan":"Bontoala",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S1",
+    "Cluster_ID":2,
+    "Cluster_Label":"Cluster 2",
+    "Ringkasan":"Jumlah kontak 5668 orang, proporsi kontak serumah 20.94%, rata-rata umur 34.57 tahun.",
+    "Interpretasi":"Kecamatan Bontoala memiliki 5668 kontak dengan sekitar 20.94% tinggal serumah. Rata-rata umur kontak 34.57 tahun, menunjukkan dominasi usia dewasa produktif."
+  },
+  {
+    "kecamatan_full":"Bontoala, Kota Makassar",
+    "Kecamatan":"Bontoala",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S2",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Batuk 0.83%, sesak nafas 0.16%, keringat malam 0.12%, demam meriang 0.25%.",
+    "Interpretasi":"Gejala klinis TB di Bontoala ditandai dengan batuk pada 0.83% kontak. Keluhan lain seperti sesak nafas (0.16%), keringat malam (0.12%), dan demam meriang (0.25%) muncul dengan frekuensi lebih rendah."
+  },
+  {
+    "kecamatan_full":"Bontoala, Kota Makassar",
+    "Kecamatan":"Bontoala",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S3",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Ibu hamil 0.02%, lansia 9.17%, diabetes 0.11%, perokok 10.96%, tidak tuntas berobat 0.04%.",
+    "Interpretasi":"Faktor risiko di Bontoala meliputi 10.96% perokok, 9.17% lansia, 0.02% ibu hamil, serta 0.11% dengan diabetes mellitus. Sebanyak 0.04% memiliki riwayat pengobatan tidak tuntas."
+  },
+  {
+    "kecamatan_full":"Bontoala, Kota Makassar",
+    "Kecamatan":"Bontoala",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S4",
+    "Cluster_ID":7,
+    "Cluster_Label":"Cluster 7",
+    "Ringkasan":"Penduduk Laki-Laki 48.91%, Perempuan 51.09%, rata-rata umur 34.57 tahun.",
+    "Interpretasi":"Demografi Bontoala cukup seimbang dengan 48.91% Laki-Laki dan 51.09% Perempuan. Rata-rata umur penduduk adalah 34.57 tahun."
+  },
+  {
+    "kecamatan_full":"Bontoala, Kota Makassar",
+    "Kecamatan":"Bontoala",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S5",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Jumlah kontak 5668 orang, dirujuk 44 (0.78%), fasilitas kesehatan 2.",
+    "Interpretasi":"Di Bontoala, dari 5668 kontak terdapat 44 (0.78%) yang dirujuk. Jumlah fasilitas kesehatan yang tercatat adalah 2 unit."
+  },
+  {
+    "kecamatan_full":"Bontoala, Kota Makassar",
+    "Kecamatan":"Bontoala",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S6",
+    "Cluster_ID":2,
+    "Cluster_Label":"Cluster 2",
+    "Ringkasan":"Lokasi koordinat (-5.131, 119.421), jumlah fasilitas kesehatan 2.",
+    "Interpretasi":"Kecamatan Bontoala terletak pada koordinat lintang -5.131 dan bujur 119.421. Terdapat 2 fasilitas kesehatan yang melayani wilayah ini."
+  },
+  {
+    "kecamatan_full":"Bontomarannu, Kabupaten Gowa",
+    "Kecamatan":"Bontomarannu",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S1",
+    "Cluster_ID":2,
+    "Cluster_Label":"Cluster 2",
+    "Ringkasan":"Jumlah kontak 1388 orang, proporsi kontak serumah 21.33%, rata-rata umur 32.73 tahun.",
+    "Interpretasi":"Kecamatan Bontomarannu memiliki 1388 kontak dengan sekitar 21.33% tinggal serumah. Rata-rata umur kontak 32.73 tahun, menunjukkan dominasi usia dewasa produktif."
+  },
+  {
+    "kecamatan_full":"Bontomarannu, Kabupaten Gowa",
+    "Kecamatan":"Bontomarannu",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S2",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Batuk 14.77%, sesak nafas 0.86%, keringat malam 0.29%, demam meriang 0.22%.",
+    "Interpretasi":"Gejala klinis TB di Bontomarannu ditandai dengan batuk pada 14.77% kontak. Keluhan lain seperti sesak nafas (0.86%), keringat malam (0.29%), dan demam meriang (0.22%) muncul dengan frekuensi lebih rendah."
+  },
+  {
+    "kecamatan_full":"Bontomarannu, Kabupaten Gowa",
+    "Kecamatan":"Bontomarannu",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S3",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Ibu hamil 0%, lansia 8.43%, diabetes 0%, perokok 1.87%, tidak tuntas berobat 0%.",
+    "Interpretasi":"Faktor risiko di Bontomarannu meliputi 1.87% perokok, 8.43% lansia, 0% ibu hamil, serta 0% dengan diabetes mellitus. Sebanyak 0% memiliki riwayat pengobatan tidak tuntas."
+  },
+  {
+    "kecamatan_full":"Bontomarannu, Kabupaten Gowa",
+    "Kecamatan":"Bontomarannu",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S4",
+    "Cluster_ID":6,
+    "Cluster_Label":"Cluster 6",
+    "Ringkasan":"Penduduk Laki-Laki 47.41%, Perempuan 52.59%, rata-rata umur 32.73 tahun.",
+    "Interpretasi":"Demografi Bontomarannu cukup seimbang dengan 47.41% Laki-Laki dan 52.59% Perempuan. Rata-rata umur penduduk adalah 32.73 tahun."
+  },
+  {
+    "kecamatan_full":"Bontomarannu, Kabupaten Gowa",
+    "Kecamatan":"Bontomarannu",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S5",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Jumlah kontak 1388 orang, dirujuk 204 (14.7%), fasilitas kesehatan 1.",
+    "Interpretasi":"Di Bontomarannu, dari 1388 kontak terdapat 204 (14.7%) yang dirujuk. Jumlah fasilitas kesehatan yang tercatat adalah 1 unit."
+  },
+  {
+    "kecamatan_full":"Bontomarannu, Kabupaten Gowa",
+    "Kecamatan":"Bontomarannu",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S6",
+    "Cluster_ID":5,
+    "Cluster_Label":"Cluster 5",
+    "Ringkasan":"Lokasi koordinat (-5.232, 119.51), jumlah fasilitas kesehatan 1.",
+    "Interpretasi":"Kecamatan Bontomarannu terletak pada koordinat lintang -5.232 dan bujur 119.51. Terdapat 1 fasilitas kesehatan yang melayani wilayah ini."
+  },
+  {
+    "kecamatan_full":"Bontonompo Selatan, Kabupaten Gowa",
+    "Kecamatan":"Bontonompo Selatan",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S1",
+    "Cluster_ID":2,
+    "Cluster_Label":"Cluster 2",
+    "Ringkasan":"Jumlah kontak 4421 orang, proporsi kontak serumah 16.76%, rata-rata umur 33.25 tahun.",
+    "Interpretasi":"Kecamatan Bontonompo Selatan memiliki 4421 kontak dengan sekitar 16.76% tinggal serumah. Rata-rata umur kontak 33.25 tahun, menunjukkan dominasi usia dewasa produktif."
+  },
+  {
+    "kecamatan_full":"Bontonompo Selatan, Kabupaten Gowa",
+    "Kecamatan":"Bontonompo Selatan",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S2",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Batuk 7.85%, sesak nafas 1.38%, keringat malam 0.66%, demam meriang 0.5%.",
+    "Interpretasi":"Gejala klinis TB di Bontonompo Selatan ditandai dengan batuk pada 7.85% kontak. Keluhan lain seperti sesak nafas (1.38%), keringat malam (0.66%), dan demam meriang (0.5%) muncul dengan frekuensi lebih rendah."
+  },
+  {
+    "kecamatan_full":"Bontonompo Selatan, Kabupaten Gowa",
+    "Kecamatan":"Bontonompo Selatan",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S3",
+    "Cluster_ID":1,
+    "Cluster_Label":"Cluster 1",
+    "Ringkasan":"Ibu hamil 0.43%, lansia 10.99%, diabetes 0.61%, perokok 11.9%, tidak tuntas berobat 0.14%.",
+    "Interpretasi":"Faktor risiko di Bontonompo Selatan meliputi 11.9% perokok, 10.99% lansia, 0.43% ibu hamil, serta 0.61% dengan diabetes mellitus. Sebanyak 0.14% memiliki riwayat pengobatan tidak tuntas."
+  },
+  {
+    "kecamatan_full":"Bontonompo Selatan, Kabupaten Gowa",
+    "Kecamatan":"Bontonompo Selatan",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S4",
+    "Cluster_ID":6,
+    "Cluster_Label":"Cluster 6",
+    "Ringkasan":"Penduduk Laki-Laki 47.77%, Perempuan 52.23%, rata-rata umur 33.25 tahun.",
+    "Interpretasi":"Demografi Bontonompo Selatan cukup seimbang dengan 47.77% Laki-Laki dan 52.23% Perempuan. Rata-rata umur penduduk adalah 33.25 tahun."
+  },
+  {
+    "kecamatan_full":"Bontonompo Selatan, Kabupaten Gowa",
+    "Kecamatan":"Bontonompo Selatan",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S5",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Jumlah kontak 4421 orang, dirujuk 350 (7.92%), fasilitas kesehatan 1.",
+    "Interpretasi":"Di Bontonompo Selatan, dari 4421 kontak terdapat 350 (7.92%) yang dirujuk. Jumlah fasilitas kesehatan yang tercatat adalah 1 unit."
+  },
+  {
+    "kecamatan_full":"Bontonompo Selatan, Kabupaten Gowa",
+    "Kecamatan":"Bontonompo Selatan",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S6",
+    "Cluster_ID":5,
+    "Cluster_Label":"Cluster 5",
+    "Ringkasan":"Lokasi koordinat (-5.398, 119.389), jumlah fasilitas kesehatan 1.",
+    "Interpretasi":"Kecamatan Bontonompo Selatan terletak pada koordinat lintang -5.398 dan bujur 119.389. Terdapat 1 fasilitas kesehatan yang melayani wilayah ini."
+  },
+  {
+    "kecamatan_full":"Bontonompo, Kabupaten Gowa",
+    "Kecamatan":"Bontonompo",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S1",
+    "Cluster_ID":0,
+    "Cluster_Label":"Cluster 0",
+    "Ringkasan":"Jumlah kontak 7164 orang, proporsi kontak serumah 20.71%, rata-rata umur 36.25 tahun.",
+    "Interpretasi":"Kecamatan Bontonompo memiliki 7164 kontak dengan sekitar 20.71% tinggal serumah. Rata-rata umur kontak 36.25 tahun, menunjukkan dominasi usia dewasa produktif."
+  },
+  {
+    "kecamatan_full":"Bontonompo, Kabupaten Gowa",
+    "Kecamatan":"Bontonompo",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S2",
+    "Cluster_ID":0,
+    "Cluster_Label":"Cluster 0",
+    "Ringkasan":"Batuk 16.43%, sesak nafas 11.28%, keringat malam 1.12%, demam meriang 0.91%.",
+    "Interpretasi":"Gejala klinis TB di Bontonompo ditandai dengan batuk pada 16.43% kontak. Keluhan lain seperti sesak nafas (11.28%), keringat malam (1.12%), dan demam meriang (0.91%) muncul dengan frekuensi lebih rendah."
+  },
+  {
+    "kecamatan_full":"Bontonompo, Kabupaten Gowa",
+    "Kecamatan":"Bontonompo",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S3",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Ibu hamil 0.07%, lansia 13.43%, diabetes 0.53%, perokok 4.94%, tidak tuntas berobat 0.08%.",
+    "Interpretasi":"Faktor risiko di Bontonompo meliputi 4.94% perokok, 13.43% lansia, 0.07% ibu hamil, serta 0.53% dengan diabetes mellitus. Sebanyak 0.08% memiliki riwayat pengobatan tidak tuntas."
+  },
+  {
+    "kecamatan_full":"Bontonompo, Kabupaten Gowa",
+    "Kecamatan":"Bontonompo",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S4",
+    "Cluster_ID":2,
+    "Cluster_Label":"Cluster 2",
+    "Ringkasan":"Penduduk Laki-Laki 46.55%, Perempuan 53.45%, rata-rata umur 36.25 tahun.",
+    "Interpretasi":"Demografi Bontonompo cukup seimbang dengan 46.55% Laki-Laki dan 53.45% Perempuan. Rata-rata umur penduduk adalah 36.25 tahun."
+  },
+  {
+    "kecamatan_full":"Bontonompo, Kabupaten Gowa",
+    "Kecamatan":"Bontonompo",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S5",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Jumlah kontak 7164 orang, dirujuk 1179 (16.46%), fasilitas kesehatan 1.",
+    "Interpretasi":"Di Bontonompo, dari 7164 kontak terdapat 1179 (16.46%) yang dirujuk. Jumlah fasilitas kesehatan yang tercatat adalah 1 unit."
+  },
+  {
+    "kecamatan_full":"Bontonompo, Kabupaten Gowa",
+    "Kecamatan":"Bontonompo",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S6",
+    "Cluster_ID":5,
+    "Cluster_Label":"Cluster 5",
+    "Ringkasan":"Lokasi koordinat (-5.346, 119.445), jumlah fasilitas kesehatan 1.",
+    "Interpretasi":"Kecamatan Bontonompo terletak pada koordinat lintang -5.346 dan bujur 119.445. Terdapat 1 fasilitas kesehatan yang melayani wilayah ini."
+  },
+  {
+    "kecamatan_full":"Makassar, Kota Makassar",
+    "Kecamatan":"Makassar",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S1",
+    "Cluster_ID":1,
+    "Cluster_Label":"Cluster 1",
+    "Ringkasan":"Jumlah kontak 18618 orang, proporsi kontak serumah 19.17%, rata-rata umur 32.86 tahun.",
+    "Interpretasi":"Kecamatan Makassar memiliki 18618 kontak dengan sekitar 19.17% tinggal serumah. Rata-rata umur kontak 32.86 tahun, menunjukkan dominasi usia dewasa produktif."
+  },
+  {
+    "kecamatan_full":"Makassar, Kota Makassar",
+    "Kecamatan":"Makassar",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S2",
+    "Cluster_ID":1,
+    "Cluster_Label":"Cluster 1",
+    "Ringkasan":"Batuk 3.97%, sesak nafas 0.48%, keringat malam 1.48%, demam meriang 2.39%.",
+    "Interpretasi":"Gejala klinis TB di Makassar ditandai dengan batuk pada 3.97% kontak. Keluhan lain seperti sesak nafas (0.48%), keringat malam (1.48%), dan demam meriang (2.39%) muncul dengan frekuensi lebih rendah."
+  },
+  {
+    "kecamatan_full":"Makassar, Kota Makassar",
+    "Kecamatan":"Makassar",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S3",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Ibu hamil 0.01%, lansia 6.97%, diabetes 0.12%, perokok 5.38%, tidak tuntas berobat 0.04%.",
+    "Interpretasi":"Faktor risiko di Makassar meliputi 5.38% perokok, 6.97% lansia, 0.01% ibu hamil, serta 0.12% dengan diabetes mellitus. Sebanyak 0.04% memiliki riwayat pengobatan tidak tuntas."
+  },
+  {
+    "kecamatan_full":"Makassar, Kota Makassar",
+    "Kecamatan":"Makassar",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S4",
+    "Cluster_ID":4,
+    "Cluster_Label":"Cluster 4",
+    "Ringkasan":"Penduduk Laki-Laki 49.72%, Perempuan 50.28%, rata-rata umur 32.86 tahun.",
+    "Interpretasi":"Demografi Makassar cukup seimbang dengan 49.72% Laki-Laki dan 50.28% Perempuan. Rata-rata umur penduduk adalah 32.86 tahun."
+  },
+  {
+    "kecamatan_full":"Makassar, Kota Makassar",
+    "Kecamatan":"Makassar",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S5",
+    "Cluster_ID":1,
+    "Cluster_Label":"Cluster 1",
+    "Ringkasan":"Jumlah kontak 18618 orang, dirujuk 689 (3.7%), fasilitas kesehatan 4.",
+    "Interpretasi":"Di Makassar, dari 18618 kontak terdapat 689 (3.7%) yang dirujuk. Jumlah fasilitas kesehatan yang tercatat adalah 4 unit."
+  },
+  {
+    "kecamatan_full":"Makassar, Kota Makassar",
+    "Kecamatan":"Makassar",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S6",
+    "Cluster_ID":2,
+    "Cluster_Label":"Cluster 2",
+    "Ringkasan":"Lokasi koordinat (-5.162, 119.436), jumlah fasilitas kesehatan 4.",
+    "Interpretasi":"Kecamatan Makassar terletak pada koordinat lintang -5.162 dan bujur 119.436. Terdapat 4 fasilitas kesehatan yang melayani wilayah ini."
+  },
+  {
+    "kecamatan_full":"Mamajang, Kota Makassar",
+    "Kecamatan":"Mamajang",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S1",
+    "Cluster_ID":0,
+    "Cluster_Label":"Cluster 0",
+    "Ringkasan":"Jumlah kontak 7306 orang, proporsi kontak serumah 11.2%, rata-rata umur 36.74 tahun.",
+    "Interpretasi":"Kecamatan Mamajang memiliki 7306 kontak dengan sekitar 11.2% tinggal serumah. Rata-rata umur kontak 36.74 tahun, menunjukkan dominasi usia dewasa produktif."
+  },
+  {
+    "kecamatan_full":"Mamajang, Kota Makassar",
+    "Kecamatan":"Mamajang",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S2",
+    "Cluster_ID":1,
+    "Cluster_Label":"Cluster 1",
+    "Ringkasan":"Batuk 6.9%, sesak nafas 1.46%, keringat malam 1.2%, demam meriang 1.36%.",
+    "Interpretasi":"Gejala klinis TB di Mamajang ditandai dengan batuk pada 6.9% kontak. Keluhan lain seperti sesak nafas (1.46%), keringat malam (1.2%), dan demam meriang (1.36%) muncul dengan frekuensi lebih rendah."
+  },
+  {
+    "kecamatan_full":"Mamajang, Kota Makassar",
+    "Kecamatan":"Mamajang",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S3",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Ibu hamil 0.01%, lansia 12.03%, diabetes 0.11%, perokok 13.62%, tidak tuntas berobat 0.01%.",
+    "Interpretasi":"Faktor risiko di Mamajang meliputi 13.62% perokok, 12.03% lansia, 0.01% ibu hamil, serta 0.11% dengan diabetes mellitus. Sebanyak 0.01% memiliki riwayat pengobatan tidak tuntas."
+  },
+  {
+    "kecamatan_full":"Mamajang, Kota Makassar",
+    "Kecamatan":"Mamajang",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S4",
+    "Cluster_ID":2,
+    "Cluster_Label":"Cluster 2",
+    "Ringkasan":"Penduduk Laki-Laki 47.1%, Perempuan 52.9%, rata-rata umur 36.74 tahun.",
+    "Interpretasi":"Demografi Mamajang cukup seimbang dengan 47.1% Laki-Laki dan 52.9% Perempuan. Rata-rata umur penduduk adalah 36.74 tahun."
+  },
+  {
+    "kecamatan_full":"Mamajang, Kota Makassar",
+    "Kecamatan":"Mamajang",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S5",
+    "Cluster_ID":0,
+    "Cluster_Label":"Cluster 0",
+    "Ringkasan":"Jumlah kontak 7306 orang, dirujuk 495 (6.78%), fasilitas kesehatan 6.",
+    "Interpretasi":"Di Mamajang, dari 7306 kontak terdapat 495 (6.78%) yang dirujuk. Jumlah fasilitas kesehatan yang tercatat adalah 6 unit."
+  },
+  {
+    "kecamatan_full":"Mamajang, Kota Makassar",
+    "Kecamatan":"Mamajang",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S6",
+    "Cluster_ID":0,
+    "Cluster_Label":"Cluster 0",
+    "Ringkasan":"Lokasi koordinat (-5.164, 119.419), jumlah fasilitas kesehatan 6.",
+    "Interpretasi":"Kecamatan Mamajang terletak pada koordinat lintang -5.164 dan bujur 119.419. Terdapat 6 fasilitas kesehatan yang melayani wilayah ini."
+  },
+  {
+    "kecamatan_full":"Manggala, Kota Makassar",
+    "Kecamatan":"Manggala",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S1",
+    "Cluster_ID":1,
+    "Cluster_Label":"Cluster 1",
+    "Ringkasan":"Jumlah kontak 11904 orang, proporsi kontak serumah 25.04%, rata-rata umur 33.06 tahun.",
+    "Interpretasi":"Kecamatan Manggala memiliki 11904 kontak dengan sekitar 25.04% tinggal serumah. Rata-rata umur kontak 33.06 tahun, menunjukkan dominasi usia dewasa produktif."
+  },
+  {
+    "kecamatan_full":"Manggala, Kota Makassar",
+    "Kecamatan":"Manggala",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S2",
+    "Cluster_ID":1,
+    "Cluster_Label":"Cluster 1",
+    "Ringkasan":"Batuk 5.07%, sesak nafas 0.66%, keringat malam 0.91%, demam meriang 0.99%.",
+    "Interpretasi":"Gejala klinis TB di Manggala ditandai dengan batuk pada 5.07% kontak. Keluhan lain seperti sesak nafas (0.66%), keringat malam (0.91%), dan demam meriang (0.99%) muncul dengan frekuensi lebih rendah."
+  },
+  {
+    "kecamatan_full":"Manggala, Kota Makassar",
+    "Kecamatan":"Manggala",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S3",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Ibu hamil 0.13%, lansia 7.6%, diabetes 0.19%, perokok 3.12%, tidak tuntas berobat 0.03%.",
+    "Interpretasi":"Faktor risiko di Manggala meliputi 3.12% perokok, 7.6% lansia, 0.13% ibu hamil, serta 0.19% dengan diabetes mellitus. Sebanyak 0.03% memiliki riwayat pengobatan tidak tuntas."
+  },
+  {
+    "kecamatan_full":"Manggala, Kota Makassar",
+    "Kecamatan":"Manggala",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S4",
+    "Cluster_ID":6,
+    "Cluster_Label":"Cluster 6",
+    "Ringkasan":"Penduduk Laki-Laki 47.71%, Perempuan 52.29%, rata-rata umur 33.06 tahun.",
+    "Interpretasi":"Demografi Manggala cukup seimbang dengan 47.71% Laki-Laki dan 52.29% Perempuan. Rata-rata umur penduduk adalah 33.06 tahun."
+  },
+  {
+    "kecamatan_full":"Manggala, Kota Makassar",
+    "Kecamatan":"Manggala",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S5",
+    "Cluster_ID":0,
+    "Cluster_Label":"Cluster 0",
+    "Ringkasan":"Jumlah kontak 11904 orang, dirujuk 552 (4.64%), fasilitas kesehatan 6.",
+    "Interpretasi":"Di Manggala, dari 11904 kontak terdapat 552 (4.64%) yang dirujuk. Jumlah fasilitas kesehatan yang tercatat adalah 6 unit."
+  },
+  {
+    "kecamatan_full":"Manggala, Kota Makassar",
+    "Kecamatan":"Manggala",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S6",
+    "Cluster_ID":0,
+    "Cluster_Label":"Cluster 0",
+    "Ringkasan":"Lokasi koordinat (-5.167, 119.479), jumlah fasilitas kesehatan 6.",
+    "Interpretasi":"Kecamatan Manggala terletak pada koordinat lintang -5.167 dan bujur 119.479. Terdapat 6 fasilitas kesehatan yang melayani wilayah ini."
+  },
+  {
+    "kecamatan_full":"Manuju, Kabupaten Gowa",
+    "Kecamatan":"Manuju",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S1",
+    "Cluster_ID":2,
+    "Cluster_Label":"Cluster 2",
+    "Ringkasan":"Jumlah kontak 1065 orang, proporsi kontak serumah 9.39%, rata-rata umur 34.11 tahun.",
+    "Interpretasi":"Kecamatan Manuju memiliki 1065 kontak dengan sekitar 9.39% tinggal serumah. Rata-rata umur kontak 34.11 tahun, menunjukkan dominasi usia dewasa produktif."
+  },
+  {
+    "kecamatan_full":"Manuju, Kabupaten Gowa",
+    "Kecamatan":"Manuju",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S2",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Batuk 2.16%, sesak nafas 1.6%, keringat malam 0.09%, demam meriang 0.85%.",
+    "Interpretasi":"Gejala klinis TB di Manuju ditandai dengan batuk pada 2.16% kontak. Keluhan lain seperti sesak nafas (1.6%), keringat malam (0.09%), dan demam meriang (0.85%) muncul dengan frekuensi lebih rendah."
+  },
+  {
+    "kecamatan_full":"Manuju, Kabupaten Gowa",
+    "Kecamatan":"Manuju",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S3",
+    "Cluster_ID":2,
+    "Cluster_Label":"Cluster 2",
+    "Ringkasan":"Ibu hamil 0%, lansia 9.86%, diabetes 0.47%, perokok 26.29%, tidak tuntas berobat 0%.",
+    "Interpretasi":"Faktor risiko di Manuju meliputi 26.29% perokok, 9.86% lansia, 0% ibu hamil, serta 0.47% dengan diabetes mellitus. Sebanyak 0% memiliki riwayat pengobatan tidak tuntas."
+  },
+  {
+    "kecamatan_full":"Manuju, Kabupaten Gowa",
+    "Kecamatan":"Manuju",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S4",
+    "Cluster_ID":0,
+    "Cluster_Label":"Cluster 0",
+    "Ringkasan":"Penduduk Laki-Laki 44.98%, Perempuan 55.02%, rata-rata umur 34.11 tahun.",
+    "Interpretasi":"Demografi Manuju cukup seimbang dengan 44.98% Laki-Laki dan 55.02% Perempuan. Rata-rata umur penduduk adalah 34.11 tahun."
+  },
+  {
+    "kecamatan_full":"Manuju, Kabupaten Gowa",
+    "Kecamatan":"Manuju",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S5",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Jumlah kontak 1065 orang, dirujuk 14 (1.31%), fasilitas kesehatan 1.",
+    "Interpretasi":"Di Manuju, dari 1065 kontak terdapat 14 (1.31%) yang dirujuk. Jumlah fasilitas kesehatan yang tercatat adalah 1 unit."
+  },
+  {
+    "kecamatan_full":"Manuju, Kabupaten Gowa",
+    "Kecamatan":"Manuju",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S6",
+    "Cluster_ID":4,
+    "Cluster_Label":"Cluster 4",
+    "Ringkasan":"Lokasi koordinat (-5.286, 119.613), jumlah fasilitas kesehatan 1.",
+    "Interpretasi":"Kecamatan Manuju terletak pada koordinat lintang -5.286 dan bujur 119.613. Terdapat 1 fasilitas kesehatan yang melayani wilayah ini."
+  },
+  {
+    "kecamatan_full":"Mariso, Kota Makassar",
+    "Kecamatan":"Mariso",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S1",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Jumlah kontak 687 orang, proporsi kontak serumah 39.01%, rata-rata umur 28 tahun.",
+    "Interpretasi":"Kecamatan Mariso memiliki 687 kontak dengan sekitar 39.01% tinggal serumah. Rata-rata umur kontak 28 tahun, menunjukkan dominasi usia dewasa produktif."
+  },
+  {
+    "kecamatan_full":"Mariso, Kota Makassar",
+    "Kecamatan":"Mariso",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S2",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Batuk 3.64%, sesak nafas 1.16%, keringat malam 0.58%, demam meriang 0.58%.",
+    "Interpretasi":"Gejala klinis TB di Mariso ditandai dengan batuk pada 3.64% kontak. Keluhan lain seperti sesak nafas (1.16%), keringat malam (0.58%), dan demam meriang (0.58%) muncul dengan frekuensi lebih rendah."
+  },
+  {
+    "kecamatan_full":"Mariso, Kota Makassar",
+    "Kecamatan":"Mariso",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S3",
+    "Cluster_ID":1,
+    "Cluster_Label":"Cluster 1",
+    "Ringkasan":"Ibu hamil 0%, lansia 3.35%, diabetes 0.29%, perokok 9.02%, tidak tuntas berobat 0.15%.",
+    "Interpretasi":"Faktor risiko di Mariso meliputi 9.02% perokok, 3.35% lansia, 0% ibu hamil, serta 0.29% dengan diabetes mellitus. Sebanyak 0.15% memiliki riwayat pengobatan tidak tuntas."
+  },
+  {
+    "kecamatan_full":"Mariso, Kota Makassar",
+    "Kecamatan":"Mariso",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S4",
+    "Cluster_ID":5,
+    "Cluster_Label":"Cluster 5",
+    "Ringkasan":"Penduduk Laki-Laki 49.05%, Perempuan 50.95%, rata-rata umur 28 tahun.",
+    "Interpretasi":"Demografi Mariso cukup seimbang dengan 49.05% Laki-Laki dan 50.95% Perempuan. Rata-rata umur penduduk adalah 28 tahun."
+  },
+  {
+    "kecamatan_full":"Mariso, Kota Makassar",
+    "Kecamatan":"Mariso",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S5",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Jumlah kontak 687 orang, dirujuk 47 (6.84%), fasilitas kesehatan 3.",
+    "Interpretasi":"Di Mariso, dari 687 kontak terdapat 47 (6.84%) yang dirujuk. Jumlah fasilitas kesehatan yang tercatat adalah 3 unit."
+  },
+  {
+    "kecamatan_full":"Mariso, Kota Makassar",
+    "Kecamatan":"Mariso",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S6",
+    "Cluster_ID":2,
+    "Cluster_Label":"Cluster 2",
+    "Ringkasan":"Lokasi koordinat (-5.159, 119.409), jumlah fasilitas kesehatan 3.",
+    "Interpretasi":"Kecamatan Mariso terletak pada koordinat lintang -5.159 dan bujur 119.409. Terdapat 3 fasilitas kesehatan yang melayani wilayah ini."
+  },
+  {
+    "kecamatan_full":"Pallangga, Kabupaten Gowa",
+    "Kecamatan":"Pallangga",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S1",
+    "Cluster_ID":1,
+    "Cluster_Label":"Cluster 1",
+    "Ringkasan":"Jumlah kontak 16753 orang, proporsi kontak serumah 20.75%, rata-rata umur 32.9 tahun.",
+    "Interpretasi":"Kecamatan Pallangga memiliki 16753 kontak dengan sekitar 20.75% tinggal serumah. Rata-rata umur kontak 32.9 tahun, menunjukkan dominasi usia dewasa produktif."
+  },
+  {
+    "kecamatan_full":"Pallangga, Kabupaten Gowa",
+    "Kecamatan":"Pallangga",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S2",
+    "Cluster_ID":1,
+    "Cluster_Label":"Cluster 1",
+    "Ringkasan":"Batuk 9.19%, sesak nafas 3.5%, keringat malam 1.46%, demam meriang 2.33%.",
+    "Interpretasi":"Gejala klinis TB di Pallangga ditandai dengan batuk pada 9.19% kontak. Keluhan lain seperti sesak nafas (3.5%), keringat malam (1.46%), dan demam meriang (2.33%) muncul dengan frekuensi lebih rendah."
+  },
+  {
+    "kecamatan_full":"Pallangga, Kabupaten Gowa",
+    "Kecamatan":"Pallangga",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S3",
+    "Cluster_ID":0,
+    "Cluster_Label":"Cluster 0",
+    "Ringkasan":"Ibu hamil 0.3%, lansia 9.17%, diabetes 2.62%, perokok 12.48%, tidak tuntas berobat 0.05%.",
+    "Interpretasi":"Faktor risiko di Pallangga meliputi 12.48% perokok, 9.17% lansia, 0.3% ibu hamil, serta 2.62% dengan diabetes mellitus. Sebanyak 0.05% memiliki riwayat pengobatan tidak tuntas."
+  },
+  {
+    "kecamatan_full":"Pallangga, Kabupaten Gowa",
+    "Kecamatan":"Pallangga",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S4",
+    "Cluster_ID":7,
+    "Cluster_Label":"Cluster 7",
+    "Ringkasan":"Penduduk Laki-Laki 48.88%, Perempuan 51.12%, rata-rata umur 32.9 tahun.",
+    "Interpretasi":"Demografi Pallangga cukup seimbang dengan 48.88% Laki-Laki dan 51.12% Perempuan. Rata-rata umur penduduk adalah 32.9 tahun."
+  },
+  {
+    "kecamatan_full":"Pallangga, Kabupaten Gowa",
+    "Kecamatan":"Pallangga",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S5",
+    "Cluster_ID":1,
+    "Cluster_Label":"Cluster 1",
+    "Ringkasan":"Jumlah kontak 16753 orang, dirujuk 1548 (9.24%), fasilitas kesehatan 2.",
+    "Interpretasi":"Di Pallangga, dari 16753 kontak terdapat 1548 (9.24%) yang dirujuk. Jumlah fasilitas kesehatan yang tercatat adalah 2 unit."
+  },
+  {
+    "kecamatan_full":"Pallangga, Kabupaten Gowa",
+    "Kecamatan":"Pallangga",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S6",
+    "Cluster_ID":5,
+    "Cluster_Label":"Cluster 5",
+    "Ringkasan":"Lokasi koordinat (-5.264, 119.486), jumlah fasilitas kesehatan 2.",
+    "Interpretasi":"Kecamatan Pallangga terletak pada koordinat lintang -5.264 dan bujur 119.486. Terdapat 2 fasilitas kesehatan yang melayani wilayah ini."
+  },
+  {
+    "kecamatan_full":"Panakkukang, Kota Makassar",
+    "Kecamatan":"Panakkukang",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S1",
+    "Cluster_ID":2,
+    "Cluster_Label":"Cluster 2",
+    "Ringkasan":"Jumlah kontak 5431 orang, proporsi kontak serumah 21.58%, rata-rata umur 32.87 tahun.",
+    "Interpretasi":"Kecamatan Panakkukang memiliki 5431 kontak dengan sekitar 21.58% tinggal serumah. Rata-rata umur kontak 32.87 tahun, menunjukkan dominasi usia dewasa produktif."
+  },
+  {
+    "kecamatan_full":"Panakkukang, Kota Makassar",
+    "Kecamatan":"Panakkukang",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S2",
+    "Cluster_ID":1,
+    "Cluster_Label":"Cluster 1",
+    "Ringkasan":"Batuk 4.62%, sesak nafas 2.45%, keringat malam 1.22%, demam meriang 1.33%.",
+    "Interpretasi":"Gejala klinis TB di Panakkukang ditandai dengan batuk pada 4.62% kontak. Keluhan lain seperti sesak nafas (2.45%), keringat malam (1.22%), dan demam meriang (1.33%) muncul dengan frekuensi lebih rendah."
+  },
+  {
+    "kecamatan_full":"Panakkukang, Kota Makassar",
+    "Kecamatan":"Panakkukang",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S3",
+    "Cluster_ID":1,
+    "Cluster_Label":"Cluster 1",
+    "Ringkasan":"Ibu hamil 0.17%, lansia 7.71%, diabetes 0.46%, perokok 13.44%, tidak tuntas berobat 0.07%.",
+    "Interpretasi":"Faktor risiko di Panakkukang meliputi 13.44% perokok, 7.71% lansia, 0.17% ibu hamil, serta 0.46% dengan diabetes mellitus. Sebanyak 0.07% memiliki riwayat pengobatan tidak tuntas."
+  },
+  {
+    "kecamatan_full":"Panakkukang, Kota Makassar",
+    "Kecamatan":"Panakkukang",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S4",
+    "Cluster_ID":6,
+    "Cluster_Label":"Cluster 6",
+    "Ringkasan":"Penduduk Laki-Laki 47.47%, Perempuan 52.53%, rata-rata umur 32.87 tahun.",
+    "Interpretasi":"Demografi Panakkukang cukup seimbang dengan 47.47% Laki-Laki dan 52.53% Perempuan. Rata-rata umur penduduk adalah 32.87 tahun."
+  },
+  {
+    "kecamatan_full":"Panakkukang, Kota Makassar",
+    "Kecamatan":"Panakkukang",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S5",
+    "Cluster_ID":0,
+    "Cluster_Label":"Cluster 0",
+    "Ringkasan":"Jumlah kontak 5431 orang, dirujuk 204 (3.76%), fasilitas kesehatan 1.",
+    "Interpretasi":"Di Panakkukang, dari 5431 kontak terdapat 204 (3.76%) yang dirujuk. Jumlah fasilitas kesehatan yang tercatat adalah 1 unit."
+  },
+  {
+    "kecamatan_full":"Panakkukang, Kota Makassar",
+    "Kecamatan":"Panakkukang",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S6",
+    "Cluster_ID":1,
+    "Cluster_Label":"Cluster 1",
+    "Ringkasan":"Lokasi koordinat (-5.161, 119.449), jumlah fasilitas kesehatan 1.",
+    "Interpretasi":"Kecamatan Panakkukang terletak pada koordinat lintang -5.161 dan bujur 119.449. Terdapat 1 fasilitas kesehatan yang melayani wilayah ini."
+  },
+  {
+    "kecamatan_full":"Parangloe, Kabupaten Gowa",
+    "Kecamatan":"Parangloe",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S1",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Jumlah kontak 117 orang, proporsi kontak serumah 35.04%, rata-rata umur 31.81 tahun.",
+    "Interpretasi":"Kecamatan Parangloe memiliki 117 kontak dengan sekitar 35.04% tinggal serumah. Rata-rata umur kontak 31.81 tahun, menunjukkan dominasi usia dewasa produktif."
+  },
+  {
+    "kecamatan_full":"Parangloe, Kabupaten Gowa",
+    "Kecamatan":"Parangloe",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S2",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Batuk 9.4%, sesak nafas 0%, keringat malam 0%, demam meriang 0%.",
+    "Interpretasi":"Gejala klinis TB di Parangloe ditandai dengan batuk pada 9.4% kontak. Keluhan lain seperti sesak nafas (0%), keringat malam (0%), dan demam meriang (0%) muncul dengan frekuensi lebih rendah."
+  },
+  {
+    "kecamatan_full":"Parangloe, Kabupaten Gowa",
+    "Kecamatan":"Parangloe",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S3",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Ibu hamil 0%, lansia 6.84%, diabetes 0%, perokok 10.26%, tidak tuntas berobat 0%.",
+    "Interpretasi":"Faktor risiko di Parangloe meliputi 10.26% perokok, 6.84% lansia, 0% ibu hamil, serta 0% dengan diabetes mellitus. Sebanyak 0% memiliki riwayat pengobatan tidak tuntas."
+  },
+  {
+    "kecamatan_full":"Parangloe, Kabupaten Gowa",
+    "Kecamatan":"Parangloe",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S4",
+    "Cluster_ID":4,
+    "Cluster_Label":"Cluster 4",
+    "Ringkasan":"Penduduk Laki-Laki 49.57%, Perempuan 50.43%, rata-rata umur 31.81 tahun.",
+    "Interpretasi":"Demografi Parangloe cukup seimbang dengan 49.57% Laki-Laki dan 50.43% Perempuan. Rata-rata umur penduduk adalah 31.81 tahun."
+  },
+  {
+    "kecamatan_full":"Parangloe, Kabupaten Gowa",
+    "Kecamatan":"Parangloe",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S5",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Jumlah kontak 117 orang, dirujuk 11 (9.4%), fasilitas kesehatan 1.",
+    "Interpretasi":"Di Parangloe, dari 117 kontak terdapat 11 (9.4%) yang dirujuk. Jumlah fasilitas kesehatan yang tercatat adalah 1 unit."
+  },
+  {
+    "kecamatan_full":"Parangloe, Kabupaten Gowa",
+    "Kecamatan":"Parangloe",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S6",
+    "Cluster_ID":4,
+    "Cluster_Label":"Cluster 4",
+    "Ringkasan":"Lokasi koordinat (-5.244, 119.651), jumlah fasilitas kesehatan 1.",
+    "Interpretasi":"Kecamatan Parangloe terletak pada koordinat lintang -5.244 dan bujur 119.651. Terdapat 1 fasilitas kesehatan yang melayani wilayah ini."
+  },
+  {
+    "kecamatan_full":"Parigi, Kabupaten Gowa",
+    "Kecamatan":"Parigi",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S1",
+    "Cluster_ID":0,
+    "Cluster_Label":"Cluster 0",
+    "Ringkasan":"Jumlah kontak 767 orang, proporsi kontak serumah 18.9%, rata-rata umur 39.41 tahun.",
+    "Interpretasi":"Kecamatan Parigi memiliki 767 kontak dengan sekitar 18.9% tinggal serumah. Rata-rata umur kontak 39.41 tahun, menunjukkan dominasi usia dewasa produktif."
+  },
+  {
+    "kecamatan_full":"Parigi, Kabupaten Gowa",
+    "Kecamatan":"Parigi",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S2",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Batuk 7.04%, sesak nafas 0.91%, keringat malam 0%, demam meriang 0%.",
+    "Interpretasi":"Gejala klinis TB di Parigi ditandai dengan batuk pada 7.04% kontak. Keluhan lain seperti sesak nafas (0.91%), keringat malam (0%), dan demam meriang (0%) muncul dengan frekuensi lebih rendah."
+  },
+  {
+    "kecamatan_full":"Parigi, Kabupaten Gowa",
+    "Kecamatan":"Parigi",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S3",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Ibu hamil 0.26%, lansia 17.47%, diabetes 0.13%, perokok 1.96%, tidak tuntas berobat 0%.",
+    "Interpretasi":"Faktor risiko di Parigi meliputi 1.96% perokok, 17.47% lansia, 0.26% ibu hamil, serta 0.13% dengan diabetes mellitus. Sebanyak 0% memiliki riwayat pengobatan tidak tuntas."
+  },
+  {
+    "kecamatan_full":"Parigi, Kabupaten Gowa",
+    "Kecamatan":"Parigi",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S4",
+    "Cluster_ID":2,
+    "Cluster_Label":"Cluster 2",
+    "Ringkasan":"Penduduk Laki-Laki 47.2%, Perempuan 52.8%, rata-rata umur 39.41 tahun.",
+    "Interpretasi":"Demografi Parigi cukup seimbang dengan 47.2% Laki-Laki dan 52.8% Perempuan. Rata-rata umur penduduk adalah 39.41 tahun."
+  },
+  {
+    "kecamatan_full":"Parigi, Kabupaten Gowa",
+    "Kecamatan":"Parigi",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S5",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Jumlah kontak 767 orang, dirujuk 55 (7.17%), fasilitas kesehatan 1.",
+    "Interpretasi":"Di Parigi, dari 767 kontak terdapat 55 (7.17%) yang dirujuk. Jumlah fasilitas kesehatan yang tercatat adalah 1 unit."
+  },
+  {
+    "kecamatan_full":"Parigi, Kabupaten Gowa",
+    "Kecamatan":"Parigi",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S6",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Lokasi koordinat (-5.306, 119.806), jumlah fasilitas kesehatan 1.",
+    "Interpretasi":"Kecamatan Parigi terletak pada koordinat lintang -5.306 dan bujur 119.806. Terdapat 1 fasilitas kesehatan yang melayani wilayah ini."
+  },
+  {
+    "kecamatan_full":"Rappocini, Kota Makassar",
+    "Kecamatan":"Rappocini",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S1",
+    "Cluster_ID":2,
+    "Cluster_Label":"Cluster 2",
+    "Ringkasan":"Jumlah kontak 10579 orang, proporsi kontak serumah 12.19%, rata-rata umur 33.79 tahun.",
+    "Interpretasi":"Kecamatan Rappocini memiliki 10579 kontak dengan sekitar 12.19% tinggal serumah. Rata-rata umur kontak 33.79 tahun, menunjukkan dominasi usia dewasa produktif."
+  },
+  {
+    "kecamatan_full":"Rappocini, Kota Makassar",
+    "Kecamatan":"Rappocini",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S2",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Batuk 2.31%, sesak nafas 0.5%, keringat malam 0.14%, demam meriang 0.16%.",
+    "Interpretasi":"Gejala klinis TB di Rappocini ditandai dengan batuk pada 2.31% kontak. Keluhan lain seperti sesak nafas (0.5%), keringat malam (0.14%), dan demam meriang (0.16%) muncul dengan frekuensi lebih rendah."
+  },
+  {
+    "kecamatan_full":"Rappocini, Kota Makassar",
+    "Kecamatan":"Rappocini",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S3",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Ibu hamil 0%, lansia 8.83%, diabetes 0.23%, perokok 11.56%, tidak tuntas berobat 0.05%.",
+    "Interpretasi":"Faktor risiko di Rappocini meliputi 11.56% perokok, 8.83% lansia, 0% ibu hamil, serta 0.23% dengan diabetes mellitus. Sebanyak 0.05% memiliki riwayat pengobatan tidak tuntas."
+  },
+  {
+    "kecamatan_full":"Rappocini, Kota Makassar",
+    "Kecamatan":"Rappocini",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S4",
+    "Cluster_ID":6,
+    "Cluster_Label":"Cluster 6",
+    "Ringkasan":"Penduduk Laki-Laki 47.43%, Perempuan 52.57%, rata-rata umur 33.79 tahun.",
+    "Interpretasi":"Demografi Rappocini cukup seimbang dengan 47.43% Laki-Laki dan 52.57% Perempuan. Rata-rata umur penduduk adalah 33.79 tahun."
+  },
+  {
+    "kecamatan_full":"Rappocini, Kota Makassar",
+    "Kecamatan":"Rappocini",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S5",
+    "Cluster_ID":0,
+    "Cluster_Label":"Cluster 0",
+    "Ringkasan":"Jumlah kontak 10579 orang, dirujuk 183 (1.73%), fasilitas kesehatan 6.",
+    "Interpretasi":"Di Rappocini, dari 10579 kontak terdapat 183 (1.73%) yang dirujuk. Jumlah fasilitas kesehatan yang tercatat adalah 6 unit."
+  },
+  {
+    "kecamatan_full":"Rappocini, Kota Makassar",
+    "Kecamatan":"Rappocini",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S6",
+    "Cluster_ID":0,
+    "Cluster_Label":"Cluster 0",
+    "Ringkasan":"Lokasi koordinat (-5.172, 119.446), jumlah fasilitas kesehatan 6.",
+    "Interpretasi":"Kecamatan Rappocini terletak pada koordinat lintang -5.172 dan bujur 119.446. Terdapat 6 fasilitas kesehatan yang melayani wilayah ini."
+  },
+  {
+    "kecamatan_full":"Somba Opu, Kabupaten Gowa",
+    "Kecamatan":"Somba Opu",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S1",
+    "Cluster_ID":2,
+    "Cluster_Label":"Cluster 2",
+    "Ringkasan":"Jumlah kontak 7499 orang, proporsi kontak serumah 22.19%, rata-rata umur 31.77 tahun.",
+    "Interpretasi":"Kecamatan Somba Opu memiliki 7499 kontak dengan sekitar 22.19% tinggal serumah. Rata-rata umur kontak 31.77 tahun, menunjukkan dominasi usia dewasa produktif."
+  },
+  {
+    "kecamatan_full":"Somba Opu, Kabupaten Gowa",
+    "Kecamatan":"Somba Opu",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S2",
+    "Cluster_ID":1,
+    "Cluster_Label":"Cluster 1",
+    "Ringkasan":"Batuk 6.59%, sesak nafas 0.83%, keringat malam 1.24%, demam meriang 2.21%.",
+    "Interpretasi":"Gejala klinis TB di Somba Opu ditandai dengan batuk pada 6.59% kontak. Keluhan lain seperti sesak nafas (0.83%), keringat malam (1.24%), dan demam meriang (2.21%) muncul dengan frekuensi lebih rendah."
+  },
+  {
+    "kecamatan_full":"Somba Opu, Kabupaten Gowa",
+    "Kecamatan":"Somba Opu",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S3",
+    "Cluster_ID":1,
+    "Cluster_Label":"Cluster 1",
+    "Ringkasan":"Ibu hamil 0.09%, lansia 7.69%, diabetes 0.41%, perokok 25.5%, tidak tuntas berobat 0.2%.",
+    "Interpretasi":"Faktor risiko di Somba Opu meliputi 25.5% perokok, 7.69% lansia, 0.09% ibu hamil, serta 0.41% dengan diabetes mellitus. Sebanyak 0.2% memiliki riwayat pengobatan tidak tuntas."
+  },
+  {
+    "kecamatan_full":"Somba Opu, Kabupaten Gowa",
+    "Kecamatan":"Somba Opu",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S4",
+    "Cluster_ID":4,
+    "Cluster_Label":"Cluster 4",
+    "Ringkasan":"Penduduk Laki-Laki 49.33%, Perempuan 50.67%, rata-rata umur 31.77 tahun.",
+    "Interpretasi":"Demografi Somba Opu cukup seimbang dengan 49.33% Laki-Laki dan 50.67% Perempuan. Rata-rata umur penduduk adalah 31.77 tahun."
+  },
+  {
+    "kecamatan_full":"Somba Opu, Kabupaten Gowa",
+    "Kecamatan":"Somba Opu",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S5",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Jumlah kontak 7499 orang, dirujuk 469 (6.25%), fasilitas kesehatan 2.",
+    "Interpretasi":"Di Somba Opu, dari 7499 kontak terdapat 469 (6.25%) yang dirujuk. Jumlah fasilitas kesehatan yang tercatat adalah 2 unit."
+  },
+  {
+    "kecamatan_full":"Somba Opu, Kabupaten Gowa",
+    "Kecamatan":"Somba Opu",
+    "Wilayah":"Kabupaten Gowa",
+    "Skenario":"S6",
+    "Cluster_ID":2,
+    "Cluster_Label":"Cluster 2",
+    "Ringkasan":"Lokasi koordinat (-5.209, 119.455), jumlah fasilitas kesehatan 2.",
+    "Interpretasi":"Kecamatan Somba Opu terletak pada koordinat lintang -5.209 dan bujur 119.455. Terdapat 2 fasilitas kesehatan yang melayani wilayah ini."
+  },
+  {
+    "kecamatan_full":"Tallo, Kota Makassar",
+    "Kecamatan":"Tallo",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S1",
+    "Cluster_ID":1,
+    "Cluster_Label":"Cluster 1",
+    "Ringkasan":"Jumlah kontak 25857 orang, proporsi kontak serumah 16.03%, rata-rata umur 34.52 tahun.",
+    "Interpretasi":"Kecamatan Tallo memiliki 25857 kontak dengan sekitar 16.03% tinggal serumah. Rata-rata umur kontak 34.52 tahun, menunjukkan dominasi usia dewasa produktif."
+  },
+  {
+    "kecamatan_full":"Tallo, Kota Makassar",
+    "Kecamatan":"Tallo",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S2",
+    "Cluster_ID":1,
+    "Cluster_Label":"Cluster 1",
+    "Ringkasan":"Batuk 5.68%, sesak nafas 1.33%, keringat malam 1.75%, demam meriang 1.66%.",
+    "Interpretasi":"Gejala klinis TB di Tallo ditandai dengan batuk pada 5.68% kontak. Keluhan lain seperti sesak nafas (1.33%), keringat malam (1.75%), dan demam meriang (1.66%) muncul dengan frekuensi lebih rendah."
+  },
+  {
+    "kecamatan_full":"Tallo, Kota Makassar",
+    "Kecamatan":"Tallo",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S3",
+    "Cluster_ID":1,
+    "Cluster_Label":"Cluster 1",
+    "Ringkasan":"Ibu hamil 0.45%, lansia 5.44%, diabetes 0.53%, perokok 17.4%, tidak tuntas berobat 0.12%.",
+    "Interpretasi":"Faktor risiko di Tallo meliputi 17.4% perokok, 5.44% lansia, 0.45% ibu hamil, serta 0.53% dengan diabetes mellitus. Sebanyak 0.12% memiliki riwayat pengobatan tidak tuntas."
+  },
+  {
+    "kecamatan_full":"Tallo, Kota Makassar",
+    "Kecamatan":"Tallo",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S4",
+    "Cluster_ID":7,
+    "Cluster_Label":"Cluster 7",
+    "Ringkasan":"Penduduk Laki-Laki 49.2%, Perempuan 50.8%, rata-rata umur 34.52 tahun.",
+    "Interpretasi":"Demografi Tallo cukup seimbang dengan 49.2% Laki-Laki dan 50.8% Perempuan. Rata-rata umur penduduk adalah 34.52 tahun."
+  },
+  {
+    "kecamatan_full":"Tallo, Kota Makassar",
+    "Kecamatan":"Tallo",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S5",
+    "Cluster_ID":1,
+    "Cluster_Label":"Cluster 1",
+    "Ringkasan":"Jumlah kontak 25857 orang, dirujuk 1281 (4.95%), fasilitas kesehatan 4.",
+    "Interpretasi":"Di Tallo, dari 25857 kontak terdapat 1281 (4.95%) yang dirujuk. Jumlah fasilitas kesehatan yang tercatat adalah 4 unit."
+  },
+  {
+    "kecamatan_full":"Tallo, Kota Makassar",
+    "Kecamatan":"Tallo",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S6",
+    "Cluster_ID":2,
+    "Cluster_Label":"Cluster 2",
+    "Ringkasan":"Lokasi koordinat (-5.125, 119.43), jumlah fasilitas kesehatan 4.",
+    "Interpretasi":"Kecamatan Tallo terletak pada koordinat lintang -5.125 dan bujur 119.43. Terdapat 4 fasilitas kesehatan yang melayani wilayah ini."
+  },
+  {
+    "kecamatan_full":"Tamalanrea, Kota Makassar",
+    "Kecamatan":"Tamalanrea",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S1",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Jumlah kontak 52 orang, proporsi kontak serumah 38.08%, rata-rata umur 31.6 tahun.",
+    "Interpretasi":"Kecamatan Tamalanrea memiliki 52 kontak dengan sekitar 38.08% tinggal serumah. Rata-rata umur kontak 31.6 tahun, menunjukkan dominasi usia dewasa produktif."
+  },
+  {
+    "kecamatan_full":"Tamalanrea, Kota Makassar",
+    "Kecamatan":"Tamalanrea",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S2",
+    "Cluster_ID":1,
+    "Cluster_Label":"Cluster 1",
+    "Ringkasan":"Batuk 11.35%, sesak nafas 3.08%, keringat malam 0.58%, demam meriang 1.15%.",
+    "Interpretasi":"Gejala klinis TB di Tamalanrea ditandai dengan batuk pada 11.35% kontak. Keluhan lain seperti sesak nafas (3.08%), keringat malam (0.58%), dan demam meriang (1.15%) muncul dengan frekuensi lebih rendah."
+  },
+  {
+    "kecamatan_full":"Tamalanrea, Kota Makassar",
+    "Kecamatan":"Tamalanrea",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S3",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Ibu hamil 0%, lansia 7.88%, diabetes 0%, perokok 5.77%, tidak tuntas berobat 0%.",
+    "Interpretasi":"Faktor risiko di Tamalanrea meliputi 5.77% perokok, 7.88% lansia, 0% ibu hamil, serta 0% dengan diabetes mellitus. Sebanyak 0% memiliki riwayat pengobatan tidak tuntas."
+  },
+  {
+    "kecamatan_full":"Tamalanrea, Kota Makassar",
+    "Kecamatan":"Tamalanrea",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S4",
+    "Cluster_ID":6,
+    "Cluster_Label":"Cluster 6",
+    "Ringkasan":"Penduduk Laki-Laki 48.08%, Perempuan 51.92%, rata-rata umur 31.6 tahun.",
+    "Interpretasi":"Demografi Tamalanrea cukup seimbang dengan 48.08% Laki-Laki dan 51.92% Perempuan. Rata-rata umur penduduk adalah 31.6 tahun."
+  },
+  {
+    "kecamatan_full":"Tamalanrea, Kota Makassar",
+    "Kecamatan":"Tamalanrea",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S5",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Jumlah kontak 52 orang, dirujuk 55 (10.58%), fasilitas kesehatan 6.",
+    "Interpretasi":"Di Tamalanrea, dari 52 kontak terdapat 55 (10.58%) yang dirujuk. Jumlah fasilitas kesehatan yang tercatat adalah 6 unit."
+  },
+  {
+    "kecamatan_full":"Tamalanrea, Kota Makassar",
+    "Kecamatan":"Tamalanrea",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S6",
+    "Cluster_ID":0,
+    "Cluster_Label":"Cluster 0",
+    "Ringkasan":"Lokasi koordinat (-5.132, 119.498), jumlah fasilitas kesehatan 6.",
+    "Interpretasi":"Kecamatan Tamalanrea terletak pada koordinat lintang -5.132 dan bujur 119.498. Terdapat 6 fasilitas kesehatan yang melayani wilayah ini."
+  },
+  {
+    "kecamatan_full":"Tamalate, Kota Makassar",
+    "Kecamatan":"Tamalate",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S1",
+    "Cluster_ID":1,
+    "Cluster_Label":"Cluster 1",
+    "Ringkasan":"Jumlah kontak 164 orang, proporsi kontak serumah 17.65%, rata-rata umur 33.38 tahun.",
+    "Interpretasi":"Kecamatan Tamalate memiliki 164 kontak dengan sekitar 17.65% tinggal serumah. Rata-rata umur kontak 33.38 tahun, menunjukkan dominasi usia dewasa produktif."
+  },
+  {
+    "kecamatan_full":"Tamalate, Kota Makassar",
+    "Kecamatan":"Tamalate",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S2",
+    "Cluster_ID":1,
+    "Cluster_Label":"Cluster 1",
+    "Ringkasan":"Batuk 9.2%, sesak nafas 2.07%, keringat malam 0.9%, demam meriang 1.45%.",
+    "Interpretasi":"Gejala klinis TB di Tamalate ditandai dengan batuk pada 9.2% kontak. Keluhan lain seperti sesak nafas (2.07%), keringat malam (0.9%), dan demam meriang (1.45%) muncul dengan frekuensi lebih rendah."
+  },
+  {
+    "kecamatan_full":"Tamalate, Kota Makassar",
+    "Kecamatan":"Tamalate",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S3",
+    "Cluster_ID":1,
+    "Cluster_Label":"Cluster 1",
+    "Ringkasan":"Ibu hamil 0.26%, lansia 9.72%, diabetes 0.81%, perokok 12.07%, tidak tuntas berobat 0.07%.",
+    "Interpretasi":"Faktor risiko di Tamalate meliputi 12.07% perokok, 9.72% lansia, 0.26% ibu hamil, serta 0.81% dengan diabetes mellitus. Sebanyak 0.07% memiliki riwayat pengobatan tidak tuntas."
+  },
+  {
+    "kecamatan_full":"Tamalate, Kota Makassar",
+    "Kecamatan":"Tamalate",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S4",
+    "Cluster_ID":7,
+    "Cluster_Label":"Cluster 7",
+    "Ringkasan":"Penduduk Laki-Laki 48.44%, Perempuan 51.56%, rata-rata umur 33.38 tahun.",
+    "Interpretasi":"Demografi Tamalate cukup seimbang dengan 48.44% Laki-Laki dan 51.56% Perempuan. Rata-rata umur penduduk adalah 33.38 tahun."
+  },
+  {
+    "kecamatan_full":"Tamalate, Kota Makassar",
+    "Kecamatan":"Tamalate",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S5",
+    "Cluster_ID":0,
+    "Cluster_Label":"Cluster 0",
+    "Ringkasan":"Jumlah kontak 164 orang, dirujuk 1393 (8.49%), fasilitas kesehatan 9.",
+    "Interpretasi":"Di Tamalate, dari 164 kontak terdapat 1393 (8.49%) yang dirujuk. Jumlah fasilitas kesehatan yang tercatat adalah 9 unit."
+  },
+  {
+    "kecamatan_full":"Tamalate, Kota Makassar",
+    "Kecamatan":"Tamalate",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S6",
+    "Cluster_ID":1,
+    "Cluster_Label":"Cluster 1",
+    "Ringkasan":"Lokasi koordinat (-5.185, 119.424), jumlah fasilitas kesehatan 9.",
+    "Interpretasi":"Kecamatan Tamalate terletak pada koordinat lintang -5.185 dan bujur 119.424. Terdapat 9 fasilitas kesehatan yang melayani wilayah ini."
+  },
+  {
+    "kecamatan_full":"Ujung Pandang, Kota Makassar",
+    "Kecamatan":"Ujung Pandang",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S1",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Jumlah kontak 225 orang, proporsi kontak serumah 48%, rata-rata umur 33.51 tahun.",
+    "Interpretasi":"Kecamatan Ujung Pandang memiliki 225 kontak dengan sekitar 48% tinggal serumah. Rata-rata umur kontak 33.51 tahun, menunjukkan dominasi usia dewasa produktif."
+  },
+  {
+    "kecamatan_full":"Ujung Pandang, Kota Makassar",
+    "Kecamatan":"Ujung Pandang",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S2",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Batuk 0%, sesak nafas 0%, keringat malam 0%, demam meriang 0%.",
+    "Interpretasi":"Gejala klinis TB di Ujung Pandang ditandai dengan batuk pada 0% kontak. Keluhan lain seperti sesak nafas (0%), keringat malam (0%), dan demam meriang (0%) muncul dengan frekuensi lebih rendah."
+  },
+  {
+    "kecamatan_full":"Ujung Pandang, Kota Makassar",
+    "Kecamatan":"Ujung Pandang",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S3",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Ibu hamil 0%, lansia 9.33%, diabetes 0%, perokok 4%, tidak tuntas berobat 0%.",
+    "Interpretasi":"Faktor risiko di Ujung Pandang meliputi 4% perokok, 9.33% lansia, 0% ibu hamil, serta 0% dengan diabetes mellitus. Sebanyak 0% memiliki riwayat pengobatan tidak tuntas."
+  },
+  {
+    "kecamatan_full":"Ujung Pandang, Kota Makassar",
+    "Kecamatan":"Ujung Pandang",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S4",
+    "Cluster_ID":0,
+    "Cluster_Label":"Cluster 0",
+    "Ringkasan":"Penduduk Laki-Laki 45.78%, Perempuan 54.22%, rata-rata umur 33.51 tahun.",
+    "Interpretasi":"Demografi Ujung Pandang cukup seimbang dengan 45.78% Laki-Laki dan 54.22% Perempuan. Rata-rata umur penduduk adalah 33.51 tahun."
+  },
+  {
+    "kecamatan_full":"Ujung Pandang, Kota Makassar",
+    "Kecamatan":"Ujung Pandang",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S5",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Jumlah kontak 225 orang, dirujuk 14 (6.22%), fasilitas kesehatan 2.",
+    "Interpretasi":"Di Ujung Pandang, dari 225 kontak terdapat 14 (6.22%) yang dirujuk. Jumlah fasilitas kesehatan yang tercatat adalah 2 unit."
+  },
+  {
+    "kecamatan_full":"Ujung Pandang, Kota Makassar",
+    "Kecamatan":"Ujung Pandang",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S6",
+    "Cluster_ID":2,
+    "Cluster_Label":"Cluster 2",
+    "Ringkasan":"Lokasi koordinat (-5.162, 119.436), jumlah fasilitas kesehatan 2.",
+    "Interpretasi":"Kecamatan Ujung Pandang terletak pada koordinat lintang -5.162 dan bujur 119.436. Terdapat 2 fasilitas kesehatan yang melayani wilayah ini."
+  },
+  {
+    "kecamatan_full":"Ujung Tanah, Kota Makassar",
+    "Kecamatan":"Ujung Tanah",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S1",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Jumlah kontak 131 orang, proporsi kontak serumah 61.83%, rata-rata umur 31.86 tahun.",
+    "Interpretasi":"Kecamatan Ujung Tanah memiliki 131 kontak dengan sekitar 61.83% tinggal serumah. Rata-rata umur kontak 31.86 tahun, menunjukkan dominasi usia dewasa produktif."
+  },
+  {
+    "kecamatan_full":"Ujung Tanah, Kota Makassar",
+    "Kecamatan":"Ujung Tanah",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S2",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Batuk 0.76%, sesak nafas 0%, keringat malam 0%, demam meriang 0%.",
+    "Interpretasi":"Gejala klinis TB di Ujung Tanah ditandai dengan batuk pada 0.76% kontak. Keluhan lain seperti sesak nafas (0%), keringat malam (0%), dan demam meriang (0%) muncul dengan frekuensi lebih rendah."
+  },
+  {
+    "kecamatan_full":"Ujung Tanah, Kota Makassar",
+    "Kecamatan":"Ujung Tanah",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S3",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Ibu hamil 0%, lansia 3.82%, diabetes 0%, perokok 5.34%, tidak tuntas berobat 0%.",
+    "Interpretasi":"Faktor risiko di Ujung Tanah meliputi 5.34% perokok, 3.82% lansia, 0% ibu hamil, serta 0% dengan diabetes mellitus. Sebanyak 0% memiliki riwayat pengobatan tidak tuntas."
+  },
+  {
+    "kecamatan_full":"Ujung Tanah, Kota Makassar",
+    "Kecamatan":"Ujung Tanah",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S4",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Penduduk Laki-Laki 52.67%, Perempuan 47.33%, rata-rata umur 31.86 tahun.",
+    "Interpretasi":"Demografi Ujung Tanah cukup seimbang dengan 52.67% Laki-Laki dan 47.33% Perempuan. Rata-rata umur penduduk adalah 31.86 tahun."
+  },
+  {
+    "kecamatan_full":"Ujung Tanah, Kota Makassar",
+    "Kecamatan":"Ujung Tanah",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S5",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Jumlah kontak 131 orang, dirujuk 0 (0%), fasilitas kesehatan 2.",
+    "Interpretasi":"Di Ujung Tanah, dari 131 kontak terdapat 0 (0%) yang dirujuk. Jumlah fasilitas kesehatan yang tercatat adalah 2 unit."
+  },
+  {
+    "kecamatan_full":"Ujung Tanah, Kota Makassar",
+    "Kecamatan":"Ujung Tanah",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S6",
+    "Cluster_ID":2,
+    "Cluster_Label":"Cluster 2",
+    "Ringkasan":"Lokasi koordinat (-5.049, 119.328), jumlah fasilitas kesehatan 2.",
+    "Interpretasi":"Kecamatan Ujung Tanah terletak pada koordinat lintang -5.049 dan bujur 119.328. Terdapat 2 fasilitas kesehatan yang melayani wilayah ini."
+  },
+  {
+    "kecamatan_full":"Wajo, Kota Makassar",
+    "Kecamatan":"Wajo",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S1",
+    "Cluster_ID":2,
+    "Cluster_Label":"Cluster 2",
+    "Ringkasan":"Jumlah kontak 2965 orang, proporsi kontak serumah 13.15%, rata-rata umur 32.77 tahun.",
+    "Interpretasi":"Kecamatan Wajo memiliki 2965 kontak dengan sekitar 13.15% tinggal serumah. Rata-rata umur kontak 32.77 tahun, menunjukkan dominasi usia dewasa produktif."
+  },
+  {
+    "kecamatan_full":"Wajo, Kota Makassar",
+    "Kecamatan":"Wajo",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S2",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Batuk 1.82%, sesak nafas 0.24%, keringat malam 0%, demam meriang 0.1%.",
+    "Interpretasi":"Gejala klinis TB di Wajo ditandai dengan batuk pada 1.82% kontak. Keluhan lain seperti sesak nafas (0.24%), keringat malam (0%), dan demam meriang (0.1%) muncul dengan frekuensi lebih rendah."
+  },
+  {
+    "kecamatan_full":"Wajo, Kota Makassar",
+    "Kecamatan":"Wajo",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S3",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Ibu hamil 0.4%, lansia 6.41%, diabetes 0.3%, perokok 11.26%, tidak tuntas berobat 0%.",
+    "Interpretasi":"Faktor risiko di Wajo meliputi 11.26% perokok, 6.41% lansia, 0.4% ibu hamil, serta 0.3% dengan diabetes mellitus. Sebanyak 0% memiliki riwayat pengobatan tidak tuntas."
+  },
+  {
+    "kecamatan_full":"Wajo, Kota Makassar",
+    "Kecamatan":"Wajo",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S4",
+    "Cluster_ID":0,
+    "Cluster_Label":"Cluster 0",
+    "Ringkasan":"Penduduk Laki-Laki 46.31%, Perempuan 53.69%, rata-rata umur 32.77 tahun.",
+    "Interpretasi":"Demografi Wajo cukup seimbang dengan 46.31% Laki-Laki dan 53.69% Perempuan. Rata-rata umur penduduk adalah 32.77 tahun."
+  },
+  {
+    "kecamatan_full":"Wajo, Kota Makassar",
+    "Kecamatan":"Wajo",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S5",
+    "Cluster_ID":3,
+    "Cluster_Label":"Cluster 3",
+    "Ringkasan":"Jumlah kontak 2965 orang, dirujuk 14 (0.47%), fasilitas kesehatan 4.",
+    "Interpretasi":"Di Wajo, dari 2965 kontak terdapat 14 (0.47%) yang dirujuk. Jumlah fasilitas kesehatan yang tercatat adalah 4 unit."
+  },
+  {
+    "kecamatan_full":"Wajo, Kota Makassar",
+    "Kecamatan":"Wajo",
+    "Wilayah":"Kota Makassar",
+    "Skenario":"S6",
+    "Cluster_ID":2,
+    "Cluster_Label":"Cluster 2",
+    "Ringkasan":"Lokasi koordinat (-5.126, 119.411), jumlah fasilitas kesehatan 4.",
+    "Interpretasi":"Kecamatan Wajo terletak pada koordinat lintang -5.126 dan bujur 119.411. Terdapat 4 fasilitas kesehatan yang melayani wilayah ini."
+  }
+]

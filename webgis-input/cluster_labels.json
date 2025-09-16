@@ -1,0 +1,45 @@
+{
+  "S1": {
+    "0": "Cluster 0",
+    "1": "Cluster 1",
+    "2": "Cluster 2",
+    "3": "Cluster 3"
+  },
+  "S2": {
+    "0": "Cluster 0",
+    "1": "Cluster 1",
+    "2": "Cluster 2",
+    "3": "Cluster 3",
+    "4": "Cluster 4"
+  },
+  "S3": {
+    "0": "Cluster 0",
+    "1": "Cluster 1",
+    "2": "Cluster 2",
+    "3": "Cluster 3"
+  },
+  "S4": {
+    "0": "Cluster 0",
+    "1": "Cluster 1",
+    "2": "Cluster 2",
+    "3": "Cluster 3",
+    "4": "Cluster 4",
+    "5": "Cluster 5",
+    "6": "Cluster 6",
+    "7": "Cluster 7"
+  },
+  "S5": {
+    "0": "Cluster 0",
+    "1": "Cluster 1",
+    "2": "Cluster 2",
+    "3": "Cluster 3"
+  },
+  "S6": {
+    "0": "Cluster 0",
+    "1": "Cluster 1",
+    "2": "Cluster 2",
+    "3": "Cluster 3",
+    "4": "Cluster 4",
+    "5": "Cluster 5"
+  }
+}
